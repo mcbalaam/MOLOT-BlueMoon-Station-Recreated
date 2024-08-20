@@ -4547,7 +4547,6 @@
 /turf/open/floor/plasteel,
 /area/command/corporate_showroom)
 "brY" = (
-/obj/machinery/power/deck_relay,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -6001,10 +6000,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/security/prison/cells)
-"bIm" = (
-/obj/effect/landmark/start/shaft_miner,
-/turf/open/floor/plasteel,
-/area/cargo/miningdock)
 "bIq" = (
 /obj/structure/ladder,
 /turf/open/floor/plating,
@@ -18489,14 +18484,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard/aft)
-"gLy" = (
-/obj/structure/closet/secure_closet/miner,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/radio/intercom{
-	pixel_x = -30
-	},
-/turf/open/floor/plasteel,
-/area/cargo/miningdock)
 "gLH" = (
 /turf/closed/wall/r_wall,
 /area/command/gateway)
@@ -27034,13 +27021,6 @@
 "krq" = (
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/hallway/secondary/exit/departure_lounge)
-"krw" = (
-/obj/effect/landmark/start/shaft_miner,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel,
-/area/cargo/miningdock)
 "krB" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall,
@@ -46226,7 +46206,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/rnd/production/techfab/department/cargo,
 /turf/open/floor/plasteel,
 /area/cargo/miningdock)
 "suX" = (
@@ -59437,10 +59416,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
-"xWY" = (
-/obj/structure/tank_dispenser/oxygen,
-/turf/open/floor/plasteel,
-/area/cargo/miningdock)
 "xXS" = (
 /obj/machinery/rnd/server,
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
@@ -59753,7 +59728,6 @@
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "ygj" = (
-/obj/effect/landmark/start/shaft_miner,
 /obj/machinery/airalarm{
 	pixel_y = 26
 	},
@@ -98208,7 +98182,7 @@ avT
 avT
 avT
 bLT
-xWY
+fUa
 suL
 sFm
 jkL
@@ -98466,8 +98440,8 @@ gbc
 gbc
 bLT
 ygj
-bIm
-krw
+fUa
+bEi
 bra
 xRH
 xRH
@@ -98722,8 +98696,8 @@ aZi
 afQ
 gbc
 bLT
-gLy
-qJV
+fUa
+fUa
 brY
 xpl
 xRH
