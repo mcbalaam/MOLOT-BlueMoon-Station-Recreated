@@ -964,11 +964,8 @@
 /obj/structure/railing{
 	dir = 2
 	},
-/turf/open/floor/plasteel/stairs/left{
-	dir = 4;
-	color = "#66686e"
-	},
-/area/icemoon/underground/unexplored/rivers)
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "dp" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -1165,6 +1162,13 @@
 	dir = 8
 	},
 /area/mine/production)
+"dZ" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "ea" = (
 /obj/effect/turf_decal/trimline/brown/filled/corner,
 /obj/effect/turf_decal/tile/neutral{
@@ -1600,6 +1604,7 @@
 /area/mine/living_quarters)
 "fj" = (
 /obj/structure/closet/crate/trashcart,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/mine/living_quarters)
 "fk" = (
@@ -2374,12 +2379,6 @@
 	},
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
-"hu" = (
-/obj/structure/fence/handrail/handrail_end{
-	dir = 1
-	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
 "hv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -2509,6 +2508,7 @@
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos)
 "hQ" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -3083,10 +3083,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/mine/maintenance)
-"jP" = (
-/obj/structure/marker_beacon/burgundy,
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
 "jT" = (
 /obj/structure/flora/rock/jungle,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -3577,6 +3573,12 @@
 "lJ" = (
 /turf/closed/wall/r_wall,
 /area/science/xenobiology)
+"lK" = (
+/obj/structure/fence/handrail/handrail_end{
+	dir = 8
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "lL" = (
 /turf/closed/wall/mineral/wood,
 /area/maintenance/bar)
@@ -3602,6 +3604,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/service/chapel/main/monastery)
+"lO" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/railing{
+	dir = 2
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "lQ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -4002,13 +4013,14 @@
 /turf/open/floor/plating,
 /area/engineering/atmos)
 "ni" = (
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
+	},
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/floor/plasteel/stairs/right{
-	dir = 4;
-	color = "#66686e"
-	},
+/turf/open/space/basic,
 /area/icemoon/underground/unexplored/rivers)
 "nk" = (
 /obj/structure/stairs{
@@ -4550,6 +4562,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -6450,6 +6463,12 @@
 	dir = 1
 	},
 /area/mine/living_quarters)
+"uK" = (
+/obj/structure/fence/handrail/handrail_end{
+	dir = 1
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "uM" = (
 /obj/item/polepack,
 /turf/open/floor/plating,
@@ -6489,6 +6508,10 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/engine,
 /area/science/storage)
+"uT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/mine/living_quarters)
 "uU" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/dark/textured,
@@ -7826,6 +7849,7 @@
 /area/mine/production)
 "zl" = (
 /obj/structure/table/wood/bar,
+/obj/effect/spawner/lootdrop/syndicate_present,
 /turf/open/floor/wood,
 /area/maintenance/bar)
 "zn" = (
@@ -8174,11 +8198,14 @@
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "An" = (
-/obj/structure/railing,
-/turf/open/floor/plasteel/stairs/left{
-	dir = 4;
-	color = "#66686e"
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
 	},
+/obj/structure/railing{
+	dir = 2
+	},
+/turf/open/space/basic,
 /area/icemoon/underground/unexplored/rivers)
 "Ao" = (
 /obj/structure/light_construct/small{
@@ -8265,6 +8292,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -8980,12 +9008,6 @@
 "CP" = (
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
-"CQ" = (
-/obj/structure/fence/handrail/handrail_end{
-	dir = 4
-	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
 "CS" = (
 /obj/item/stack/tile/plasteel/shower_drain,
 /turf/open/floor/plasteel/freezer,
@@ -11879,12 +11901,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/command/bridge)
-"LS" = (
-/obj/structure/fence/handrail/handrail_end{
-	dir = 8
-	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
 "LU" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1;
@@ -12824,6 +12840,16 @@
 	},
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos/private)
+"OU" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "OV" = (
 /obj/effect/decal/cleanable/salt,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -14690,6 +14716,12 @@
 	},
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos)
+"Vu" = (
+/obj/structure/fence/handrail/handrail_end{
+	dir = 4
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "Vv" = (
 /obj/effect/spawner/structure/window/ice,
 /turf/open/floor/plating,
@@ -15320,9 +15352,9 @@
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "XC" = (
-/obj/structure/girder/displaced,
-/turf/open/floor/wood,
-/area/maintenance/bar)
+/obj/structure/marker_beacon/burgundy,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "XD" = (
 /obj/structure/closet/l3closet/scientist,
 /obj/item/extinguisher,
@@ -47071,7 +47103,7 @@ lL
 eo
 eo
 lv
-XC
+eo
 pD
 nW
 lL
@@ -53792,7 +53824,7 @@ ah
 ah
 fb
 ni
-do
+An
 fb
 fb
 fb
@@ -55818,7 +55850,7 @@ ah
 ah
 nd
 oQ
-oQ
+uT
 nd
 nd
 nd
@@ -60134,7 +60166,7 @@ hS
 hS
 kD
 hS
-Ht
+lO
 gG
 mk
 bX
@@ -60641,7 +60673,7 @@ hS
 ed
 hS
 hS
-vI
+do
 nA
 Qh
 oD
@@ -60957,7 +60989,7 @@ uR
 uR
 uR
 wN
-Ht
+dZ
 qt
 wN
 uR
@@ -61472,7 +61504,7 @@ uR
 uR
 wN
 Ht
-qt
+OU
 wN
 uR
 VE
@@ -75333,16 +75365,16 @@ ah
 vI
 mH
 so
-jP
+XC
 vI
-jP
+XC
 vI
-jP
+XC
 vI
-jP
+XC
 vI
-jP
-hu
+XC
+uK
 mH
 vI
 FC
@@ -75588,7 +75620,7 @@ ah
 ah
 ah
 FC
-CQ
+Vu
 vI
 vI
 VE
@@ -75600,7 +75632,7 @@ VE
 vI
 vI
 vI
-CQ
+Vu
 vI
 FC
 ah
@@ -75845,7 +75877,7 @@ ah
 ah
 ah
 ah
-jP
+XC
 vI
 vI
 VE
@@ -75857,7 +75889,7 @@ VE
 VE
 VE
 vI
-jP
+XC
 vI
 FC
 ah
@@ -76359,7 +76391,7 @@ ah
 ah
 ah
 FC
-jP
+XC
 VE
 VE
 VE
@@ -76371,7 +76403,7 @@ VE
 VE
 VE
 vI
-jP
+XC
 vI
 vI
 FC
@@ -76873,7 +76905,7 @@ ah
 ah
 ah
 vI
-jP
+XC
 VE
 VE
 VE
@@ -76885,7 +76917,7 @@ uR
 VE
 VE
 vI
-jP
+XC
 vI
 vI
 FC
@@ -77387,7 +77419,7 @@ ah
 ah
 ah
 ah
-jP
+XC
 vI
 VE
 VE
@@ -77399,7 +77431,7 @@ uR
 VE
 VE
 vI
-jP
+XC
 vI
 vI
 FC
@@ -77901,7 +77933,7 @@ ah
 ah
 ah
 ah
-jP
+XC
 vI
 VE
 VE
@@ -77913,7 +77945,7 @@ VE
 VE
 vI
 vI
-jP
+XC
 vI
 FC
 FC
@@ -78158,7 +78190,7 @@ ah
 ah
 ah
 vI
-LS
+lK
 vI
 vI
 vI
@@ -78170,7 +78202,7 @@ VE
 vI
 vI
 vI
-LS
+lK
 vI
 FC
 FC
@@ -78417,16 +78449,16 @@ FC
 vI
 mH
 so
-jP
+XC
 vI
-jP
+XC
 vI
-jP
+XC
 vI
-jP
+XC
 vI
-jP
-hu
+XC
+uK
 mH
 vI
 FC
