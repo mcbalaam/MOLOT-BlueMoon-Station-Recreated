@@ -571,6 +571,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -682,7 +683,9 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 10
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "cC" = (
@@ -1167,6 +1170,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "ea" = (
@@ -1299,6 +1305,7 @@
 	icon_state = "0-2";
 	pixel_y = 1
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/iron/dark/corner{
 	dir = 8
 	},
@@ -1500,6 +1507,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/open/floor/iron,
 /area/mine/eva)
 "eV" = (
@@ -1534,6 +1542,9 @@
 /obj/effect/turf_decal/stripes/white/line,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 10
 	},
 /turf/open/floor/iron/textured_large,
 /area/mine/living_quarters)
@@ -1637,6 +1648,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 10
 	},
 /turf/open/floor/iron/edge{
 	dir = 4
@@ -1821,6 +1835,9 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
 /turf/open/floor/iron/textured_large,
 /area/mine/living_quarters)
 "fJ" = (
@@ -1836,6 +1853,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -1936,6 +1955,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -2570,12 +2590,11 @@
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
 "if" = (
-/obj/structure/reagent_dispensers/water_cooler{
-	pixel_y = 3;
-	pixel_x = 3
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
+	},
+/obj/structure/reagent_dispensers/water_cooler{
+	pixel_y = 7
 	},
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
@@ -3314,6 +3333,7 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/mine/living_quarters)
 "kI" = (
@@ -4114,6 +4134,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "nB" = (
@@ -4395,6 +4416,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -4563,6 +4588,9 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -5143,6 +5171,9 @@
 	},
 /obj/structure/rack,
 /obj/item/wrench,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "qE" = (
@@ -5570,6 +5601,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -5963,6 +5995,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/marker_beacon/bronze,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "ti" = (
@@ -6759,6 +6792,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/science)
+"vE" = (
+/obj/effect/turf_decal/trimline/white/filled/line{
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/iron/textured_large,
+/area/mine/living_quarters)
 "vG" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -6784,6 +6826,9 @@
 "vH" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 5
 	},
 /turf/open/floor/iron/edge{
 	dir = 8
@@ -7045,6 +7090,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -7295,6 +7341,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -7482,6 +7529,7 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/mine/living_quarters)
 "xW" = (
@@ -7533,6 +7581,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -7560,6 +7611,7 @@
 	dir = 4
 	},
 /obj/machinery/vending/kink,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/mine/living_quarters)
 "yi" = (
@@ -7650,6 +7702,9 @@
 "yv" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
+	},
+/obj/structure/reagent_dispensers/water_cooler{
+	pixel_y = 7
 	},
 /turf/open/floor/iron/dark/textured_edge,
 /area/security/brig)
@@ -8071,6 +8126,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/marker_beacon/bronze,
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "zV" = (
@@ -8546,6 +8604,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -8613,6 +8672,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "BC" = (
@@ -8656,7 +8716,9 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 9
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "BI" = (
@@ -8740,6 +8802,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -8788,6 +8852,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/checker,
 /area/mine/living_quarters)
 "Ce" = (
@@ -8804,6 +8869,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/delivery,
+/obj/structure/transit_tube_pod{
+	dir = 4
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -8981,6 +9049,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -9417,6 +9486,9 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "Ed" = (
@@ -9445,6 +9517,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"Eh" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "Ej" = (
 /turf/closed/wall/r_wall,
 /area/maintenance/department/science)
@@ -9578,6 +9657,16 @@
 	dir = 4
 	},
 /area/command/bridge)
+"EE" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/marker_beacon/bronze,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "EF" = (
 /turf/open/floor/plating,
 /area/engineering/atmos)
@@ -9659,6 +9748,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -9894,6 +9984,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -9948,6 +10039,9 @@
 	req_access_txt = "54"
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/half,
 /area/mine/eva)
 "FQ" = (
@@ -10318,6 +10412,7 @@
 /obj/item/reagent_containers/blood/random,
 /obj/item/reagent_containers/blood/random,
 /obj/effect/turf_decal/trimline/blue/filled/line,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -10475,6 +10570,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "Hv" = (
@@ -10600,6 +10698,26 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
 /area/service/chapel/main/monastery)
+"HT" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 1;
+	color = "#A46106"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#e8eaff"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron/edge{
+	dir = 4
+	},
+/area/mine/lobby)
 "HV" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
@@ -10679,6 +10797,11 @@
 	icon_state = "0-4"
 	},
 /obj/effect/turf_decal/stripes/box,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
+"Id" = (
+/obj/structure/fence/handrail,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "Ie" = (
@@ -11282,7 +11405,9 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 6
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "JR" = (
@@ -11330,6 +11455,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -11761,6 +11887,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -12027,7 +12154,9 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "Mm" = (
@@ -12190,6 +12319,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 5
 	},
 /turf/open/floor/iron/edge{
 	dir = 2
@@ -12428,6 +12560,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/iron/edge{
 	dir = 2
@@ -13530,6 +13665,10 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"Rs" = (
+/obj/structure/disposalpipe/broken,
+/turf/open/openspace,
+/area/icemoon/surface/outdoors)
 "Rt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel/white,
@@ -14281,6 +14420,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -14297,6 +14440,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -14361,6 +14507,15 @@
 	},
 /obj/structure/fluff/railing/corner{
 	dir = 8
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
+"Uj" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 9
 	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -14576,6 +14731,7 @@
 /area/service/kitchen/coldroom)
 "UW" = (
 /obj/machinery/telecomms/relay/preset/mining,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/circuit,
 /area/mine/maintenance)
 "UY" = (
@@ -14754,6 +14910,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/textured_large,
 /area/mine/living_quarters)
 "VD" = (
@@ -15078,6 +15235,7 @@
 "WD" = (
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/machinery/iv_drip,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -15599,6 +15757,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -57903,7 +58062,7 @@ nd
 Kr
 TP
 IF
-FQ
+vE
 nd
 eO
 fK
@@ -60473,8 +60632,8 @@ Gw
 Of
 uR
 uR
-uR
-rj
+Rs
+Id
 zU
 FB
 rj
@@ -61760,7 +61919,7 @@ uR
 uR
 uR
 wN
-zU
+EE
 FB
 wN
 uR
@@ -62259,7 +62418,7 @@ kr
 fm
 rO
 wq
-Dh
+HT
 JX
 fY
 JX
@@ -62269,12 +62428,12 @@ Bm
 BV
 te
 Bz
-oD
-oD
-oD
+Eh
+Eh
+Eh
 te
-oD
-Ry
+Eh
+Uj
 qt
 vI
 sY
