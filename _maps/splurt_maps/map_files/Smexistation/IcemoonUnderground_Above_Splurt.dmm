@@ -4502,6 +4502,11 @@
 	dir = 4
 	},
 /area/mine/lobby)
+"oC" = (
+/obj/structure/lattice,
+/obj/item/disk/holodisk/snowdin/weregettingpaidright,
+/turf/open/openspace/icemoon,
+/area/icemoon/surface/outdoors)
 "oD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -6192,6 +6197,14 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
+/mob/living/simple_animal/hostile/retaliate/bat/secbat{
+	desc = "An adorable fruit bat with a cute little hat, may or may not have a reputation for biting out eyeballs, or at least that's what the HoS'd tell you.";
+	name = "Colonel Chomps"
+	},
+/obj/structure/bed/dogbed{
+	desc = "A comfy-looking pet bed. You can even strap your pet in, in case the gravity turns off.";
+	name = "pet bed"
+	},
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos/private)
 "tO" = (
@@ -6436,8 +6449,8 @@
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos)
 "uA" = (
-/obj/effect/turf_decal/bot_white/right,
 /obj/machinery/holopad,
+/obj/effect/turf_decal/bot/right,
 /turf/open/floor/iron/dark/textured_large,
 /area/security/brig)
 "uB" = (
@@ -10425,7 +10438,6 @@
 /area/science/test_area)
 "GX" = (
 /obj/structure/closet/secure_closet/hosnew,
-/obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
@@ -10434,6 +10446,9 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
+	},
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
 	},
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos/private)
@@ -10896,6 +10911,7 @@
 	pixel_x = 13;
 	pixel_y = 25
 	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/wood/wood_large,
 /area/command/heads_quarters/hos)
 "Iu" = (
@@ -46017,7 +46033,7 @@ Vw
 Vw
 Vw
 Vw
-tt
+oC
 Vw
 Tl
 tt
