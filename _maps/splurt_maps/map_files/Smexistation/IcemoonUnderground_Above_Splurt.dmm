@@ -6784,7 +6784,7 @@
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
 "vA" = (
-/obj/structure/transit_tube/diagonal/crossing,
+/obj/structure/transit_tube/diagonal,
 /turf/open/openspace,
 /area/icemoon/surface/outdoors)
 "vB" = (
