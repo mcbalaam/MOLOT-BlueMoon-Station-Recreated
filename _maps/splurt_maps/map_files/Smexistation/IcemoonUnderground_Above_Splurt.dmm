@@ -527,9 +527,11 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
-/obj/effect/turf_decal/bot,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/effect/turf_decal/bot_white{
+	color = "#ad7617"
 	},
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
@@ -728,7 +730,9 @@
 	},
 /obj/structure/rack,
 /obj/item/storage/firstaid/regular,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -1724,7 +1728,9 @@
 	dir = 5
 	},
 /obj/structure/filingcabinet,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
 "fw" = (
@@ -3013,7 +3019,6 @@
 /area/maintenance/department/science)
 "jD" = (
 /obj/structure/rack/shelf,
-/obj/effect/turf_decal/bot,
 /obj/item/clothing/shoes/winterboots/ice_boots{
 	pixel_y = -1;
 	pixel_x = -4
@@ -3029,6 +3034,9 @@
 /obj/item/clothing/suit/hooded/wintercoat{
 	pixel_x = 4;
 	pixel_y = 4
+	},
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 8
@@ -3910,8 +3918,10 @@
 	dir = 8;
 	light_color = "#e8eaff"
 	},
-/obj/effect/turf_decal/bot,
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 8
 	},
@@ -4912,7 +4922,9 @@
 /area/ai_monitored/security/armory)
 "pP" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plating,
 /area/command/bridge)
 "pQ" = (
@@ -7867,12 +7879,6 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
-"zb" = (
-/obj/structure/fireaxecabinet{
-	pixel_y = -32
-	},
-/turf/closed/wall/r_wall,
-/area/command/bridge)
 "zd" = (
 /obj/machinery/airalarm/unlocked{
 	dir = 4;
@@ -8471,9 +8477,12 @@
 /obj/effect/turf_decal/siding/dark_blue/corner{
 	dir = 2
 	},
-/obj/effect/turf_decal/bot,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/effect/turf_decal/bot_white{
+	color = "#ad7617";
+	name = "disposal marker"
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 9
@@ -9287,7 +9296,9 @@
 /area/maintenance/department/science)
 "Dy" = (
 /obj/machinery/space_heater,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plating,
 /area/command/bridge)
 "Dz" = (
@@ -11328,6 +11339,7 @@
 	},
 /obj/machinery/holopad,
 /obj/effect/turf_decal/siding/wood/corner,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
 "JH" = (
@@ -12041,7 +12053,9 @@
 "LR" = (
 /obj/structure/closet/crate,
 /obj/item/relic,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plating,
 /area/command/bridge)
 "LU" = (
@@ -12444,7 +12458,9 @@
 "Nf" = (
 /obj/structure/mopbucket,
 /obj/item/mop,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/plating,
 /area/command/bridge)
 "Nh" = (
@@ -13962,7 +13978,9 @@
 	pixel_y = 26
 	},
 /obj/structure/closet/firecloset/full,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 8
 	},
@@ -14075,7 +14093,9 @@
 /area/science/misc_lab)
 "SL" = (
 /obj/structure/closet/emcloset,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -14395,7 +14415,9 @@
 	pixel_x = 1;
 	pixel_y = 1
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -14479,6 +14501,7 @@
 	dir = 2
 	},
 /obj/machinery/holopad,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
 "Uc" = (
@@ -48648,7 +48671,7 @@ UI
 NT
 iP
 qC
-zb
+WX
 WX
 Kt
 Kt
