@@ -2892,6 +2892,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
 	},
+/obj/machinery/camera{
+	dir = 10
+	},
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -12534,6 +12537,9 @@
 "ebE" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/vending/snack/random,
+/obj/machinery/camera{
+	dir = 10
+	},
 /turf/open/floor/iron/corner{
 	dir = 8
 	},
@@ -21016,6 +21022,10 @@
 "huJ" = (
 /obj/machinery/mecha_part_fabricator,
 /obj/effect/turf_decal/bot,
+/obj/machinery/camera{
+	c_tag = "Southern Hall 3";
+	dir = 4
+	},
 /turf/open/floor/iron/corner{
 	dir = 2
 	},
