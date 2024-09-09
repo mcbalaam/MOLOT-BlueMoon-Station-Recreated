@@ -17924,6 +17924,17 @@
 	dir = 4
 	},
 /area/ai_monitored/command/nuke_storage)
+"gkb" = (
+/obj/structure/closet/wardrobe/cargotech,
+/obj/item/radio/headset/headset_cargo,
+/obj/effect/turf_decal/bot_white,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/cargo/storage)
 "gkl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -23036,6 +23047,10 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27
+	},
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#e8eaff"
 	},
 /turf/open/floor/iron,
 /area/cargo/storage)
@@ -36113,6 +36128,9 @@
 "njd" = (
 /obj/machinery/rnd/production/techfab/department/cargo,
 /obj/effect/turf_decal/bot,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -50281,6 +50299,10 @@
 	dir = 8
 	},
 /obj/structure/table,
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#e8eaff"
+	},
 /turf/open/floor/iron,
 /area/cargo/storage)
 "sLq" = (
@@ -106424,7 +106446,7 @@ ttJ
 umC
 uKy
 cqg
-nLJ
+gkb
 dCM
 vym
 sSy
