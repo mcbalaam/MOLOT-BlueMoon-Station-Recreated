@@ -13638,6 +13638,15 @@
 "lyf" = (
 /turf/open/floor/iron/smooth,
 /area/icemoon/underground/unexplored/rivers)
+"lyh" = (
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
+	},
+/turf/open/floor/iron/white/smooth_edge{
+	dir = 1
+	},
+/area/medical/medbay/aft)
 "lyi" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
@@ -14688,15 +14697,6 @@
 	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
-"mnd" = (
-/obj/structure/stairs{
-	dir = 8;
-	icon_state = "stairs_t"
-	},
-/turf/open/floor/iron/white/smooth_edge{
-	dir = 1
-	},
-/area/medical/medbay/aft)
 "mnw" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -29314,9 +29314,9 @@ seN
 seN
 seN
 kJr
-kJr
-kJr
-kJr
+oGm
+oGm
+oGm
 kJr
 kJr
 kJr
@@ -29572,8 +29572,8 @@ seN
 seN
 kJr
 kJr
-kJr
-kJr
+oGm
+oGm
 kJr
 kJr
 kJr
@@ -29829,8 +29829,8 @@ seN
 seN
 kJr
 kJr
-kJr
-kJr
+oGm
+oGm
 kJr
 kJr
 kJr
@@ -30344,7 +30344,7 @@ seN
 kJr
 kJr
 kJr
-kJr
+oGm
 kJr
 kJr
 kJr
@@ -30601,7 +30601,7 @@ seN
 kJr
 kJr
 kJr
-kJr
+oGm
 kJr
 kJr
 kJr
@@ -49192,7 +49192,7 @@ pTa
 pTa
 lNV
 idn
-mnd
+lyh
 lNV
 aQA
 gsr
