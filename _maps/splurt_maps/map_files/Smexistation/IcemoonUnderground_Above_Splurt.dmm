@@ -9627,11 +9627,9 @@
 /turf/open/openspace,
 /area/icemoon/surface/outdoors)
 "idn" = (
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 1
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
 	},
 /turf/open/floor/iron/white/smooth_edge,
 /area/medical/medbay/aft)
@@ -13640,13 +13638,6 @@
 "lyf" = (
 /turf/open/floor/iron/smooth,
 /area/icemoon/underground/unexplored/rivers)
-"lyh" = (
-/obj/structure/stairs{
-	dir = 8;
-	icon_state = "stairs_t"
-	},
-/turf/open/floor/iron,
-/area/medical/medbay/aft)
 "lyi" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
@@ -14698,10 +14689,14 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "mnd" = (
-/obj/machinery/vending/snack/random,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/iron/white,
-/area/medical/medbay/factory)
+/obj/structure/stairs{
+	dir = 8;
+	icon_state = "stairs_t"
+	},
+/turf/open/floor/iron/white/smooth_edge{
+	dir = 1
+	},
+/area/medical/medbay/aft)
 "mnw" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -22226,8 +22221,9 @@
 "sWR" = (
 /obj/machinery/vending/cola/random,
 /obj/effect/turf_decal/bot,
+/obj/machinery/light,
 /turf/open/floor/iron/white,
-/area/medical/medbay/factory)
+/area/medical/medbay/aft)
 "sWT" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -24177,7 +24173,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/medical/medbay/factory)
+/area/medical/medbay/aft)
 "uEl" = (
 /obj/effect/turf_decal/trimline/brown/filled/corner{
 	dir = 8
@@ -48938,9 +48934,9 @@ pTa
 pTa
 pTa
 lNV
-lyh
-lyh
-aQA
+lNV
+lNV
+lNV
 aQA
 vfV
 uYw
@@ -49196,9 +49192,9 @@ pTa
 pTa
 lNV
 idn
-nKm
 mnd
-nux
+lNV
+aQA
 gsr
 qbn
 aru
