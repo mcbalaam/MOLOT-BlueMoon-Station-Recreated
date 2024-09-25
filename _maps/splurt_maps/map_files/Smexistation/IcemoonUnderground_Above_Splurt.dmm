@@ -3157,6 +3157,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -3222,6 +3223,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -3713,18 +3715,13 @@
 /turf/open/openspace,
 /area/icemoon/surface/outdoors)
 "dbI" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 2;
-	color = "#A46106"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/trimline/brown/end,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -4055,6 +4052,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -4163,6 +4161,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -4649,6 +4648,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half,
 /area/mine/production)
 "dQT" = (
@@ -4796,6 +4796,7 @@
 	req_access_txt = "54"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -5381,13 +5382,6 @@
 /turf/open/floor/iron/dark/textured,
 /area/engineering/main)
 "eBV" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1;
-	color = "#A46106"
-	},
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -5396,6 +5390,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/effect/turf_decal/trimline/brown/end{
+	dir = 1
+	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -5419,23 +5417,6 @@
 	dir = 4
 	},
 /area/science)
-"eCD" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 2;
-	color = "#A46106"
-	},
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 1
-	},
-/turf/open/floor/iron/edge{
-	dir = 8
-	},
-/area/mine/lobby)
 "eCJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/fluff/railing/corner{
@@ -5670,20 +5651,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/icemoon/surface/outdoors)
-"eMT" = (
-/obj/effect/turf_decal/trimline/purple/line,
-/obj/effect/turf_decal/trimline/dark/corner{
-	dir = 8;
-	pixel_y = 16
-	},
-/obj/effect/turf_decal/trimline/dark/corner{
-	dir = 2;
-	pixel_y = 16
-	},
-/turf/open/floor/iron/edge{
-	dir = 1
-	},
-/area/science/mixing)
 "eNt" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -5763,6 +5730,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -7775,13 +7743,8 @@
 /area/science/xenobiology)
 "gsT" = (
 /obj/effect/turf_decal/trimline/purple/line,
-/obj/effect/turf_decal/trimline/dark/corner{
-	dir = 2;
-	pixel_y = 16
-	},
-/obj/effect/turf_decal/trimline/dark/corner{
-	dir = 8;
-	pixel_y = 16
+/obj/effect/turf_decal/trimline/dark/line{
+	dir = 1
 	},
 /turf/open/floor/iron/edge{
 	dir = 1
@@ -7985,6 +7948,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -9986,6 +9950,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -10135,6 +10100,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
+/obj/effect/turf_decal/bot_white,
+/obj/effect/turf_decal/trimline/brown,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -11521,6 +11488,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -12214,22 +12182,10 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "kkV" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1;
-	color = "#A46106"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron/edge{
-	dir = 4
-	},
-/area/mine/lobby)
+/obj/structure/closet/secure_closet/personal,
+/obj/effect/turf_decal/bot_white,
+/turf/open/floor/iron,
+/area/mine/living_quarters)
 "kld" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -13284,7 +13240,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/obj/effect/turf_decal/bot_white,
+/obj/effect/turf_decal/trimline/brown,
+/turf/open/floor/iron,
 /area/mine/maintenance)
 "lgw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -14320,6 +14278,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half,
 /area/mine/mechbay)
 "lZf" = (
@@ -15436,6 +15395,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -18109,6 +18069,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -19045,6 +19006,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -19171,6 +19133,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -19736,6 +19699,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -20190,6 +20154,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half,
 /area/mine/mechbay)
 "rnB" = (
@@ -20990,6 +20955,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half,
 /area/mine/eva)
 "rWZ" = (
@@ -23067,6 +23033,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/half{
 	dir = 1
 	},
@@ -26580,6 +26547,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 8
 	},
@@ -27722,6 +27690,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 4
 	},
@@ -28093,6 +28062,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/edge{
 	dir = 2
 	},
@@ -38937,7 +38907,7 @@ nGl
 fUx
 usy
 rVX
-eMT
+gsT
 pya
 dBM
 kSZ
@@ -49700,9 +49670,9 @@ oGm
 oGm
 oGm
 kJr
-oMQ
+tpo
+tpo
 pTa
-pyt
 pTa
 kGi
 rUM
@@ -49957,8 +49927,8 @@ oGm
 oGm
 oGm
 kJr
-oMQ
-pTa
+tpo
+tpo
 pTa
 pTa
 kGi
@@ -69004,7 +68974,7 @@ dIy
 tBT
 roC
 uGA
-oMQ
+uGA
 kJr
 kJr
 kJr
@@ -69260,8 +69230,8 @@ kDv
 iZQ
 xmY
 sKs
+kkV
 jhd
-oMQ
 kJr
 kJr
 kJr
@@ -69517,8 +69487,8 @@ uGA
 uGA
 aEi
 sKs
+kkV
 jhd
-oMQ
 kJr
 kJr
 kJr
@@ -69774,8 +69744,8 @@ bEc
 uGA
 prf
 sKs
+kkV
 jhd
-oMQ
 kJr
 kJr
 kJr
@@ -70032,7 +70002,7 @@ iyD
 ygc
 sKs
 uGA
-oMQ
+uGA
 kJr
 kJr
 kJr
@@ -74632,7 +74602,7 @@ ffh
 lYu
 lgx
 mDv
-kkV
+mDv
 mDv
 gAd
 aaf
@@ -74889,7 +74859,7 @@ wpT
 bXC
 kbP
 wEy
-eCD
+wEy
 wEy
 cFA
 pjg
