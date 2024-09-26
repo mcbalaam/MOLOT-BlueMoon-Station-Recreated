@@ -48728,10 +48728,9 @@
 /obj/structure/chair/pew/left{
 	dir = 4
 	},
-/obj/machinery/airalarm/mixingchamber{
+/obj/machinery/airalarm{
 	dir = 4;
-	pixel_x = -26;
-	name = "sauna air alarm"
+	pixel_x = -23
 	},
 /turf/open/floor/wood,
 /area/service/sauna)
@@ -58689,6 +58688,8 @@
 /obj/machinery/disposal/bin,
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
+"oUq" = (
+)
 "oUx" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 10
@@ -124506,7 +124507,7 @@ pYQ
 mLS
 qIO
 qSF
-lUP
+oUq
 tTc
 vxh
 cNW
