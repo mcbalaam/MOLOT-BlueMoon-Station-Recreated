@@ -840,6 +840,14 @@
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
 	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4;
+	icon_state = "bot_white"
+	},
+/obj/structure/closet/secure_closet/medical1{
+	req_access = null;
+	req_access_txt = "150"
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -1413,13 +1421,10 @@
 	},
 /area/ruin/space/has_grav/bluemoon/listeningstation)
 "rt" = (
-/obj/machinery/sleeper/syndie{
-	dir = 8
-	},
-/obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 1
 	},
+/obj/machinery/vending/wallmed/directional/north,
 /turf/open/floor/iron/dark/side,
 /area/ruin/space/has_grav/bluemoon/listeningstation)
 "rv" = (
@@ -1940,16 +1945,12 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/bluemoon/listeningstation)
 "FX" = (
-/obj/structure/closet/secure_closet/medical1{
-	req_access = null;
-	req_access_txt = "150"
-	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4;
-	icon_state = "bot_white"
-	},
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 5
+	},
+/obj/effect/turf_decal/bot,
+/obj/machinery/sleeper/syndie{
+	dir = 8
 	},
 /turf/open/floor/iron/dark/corner{
 	dir = 8
