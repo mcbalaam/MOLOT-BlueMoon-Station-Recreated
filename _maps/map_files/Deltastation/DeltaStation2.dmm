@@ -11740,6 +11740,8 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/rack,
 /obj/item/clothing/gloves/color/yellow,
+/obj/item/clothing/gloves/color/yellow,
+/obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/glasses/meson/engine,
 /turf/open/floor/plasteel,
 /area/engineering/storage)
@@ -98964,9 +98966,19 @@
 /turf/open/floor/plasteel,
 /area/cargo/miningoffice)
 "oLK" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel,
-/area/engineering/atmos)
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/open/floor/plasteel/dark,
+/area/command/heads_quarters/ce)
 "oMm" = (
 /obj/machinery/power/rad_collector/anchored,
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
@@ -101027,6 +101039,13 @@
 	},
 /turf/open/floor/wood/wood_diagonal,
 /area/security/prison/upper)
+"pqf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel,
+/area/engineering/atmos)
 "pqo" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
@@ -101152,13 +101171,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/break_room)
-"ptr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/white{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel,
-/area/engineering/atmos)
 "ptI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -105829,6 +105841,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
+"qOk" = (
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel,
+/area/engineering/atmos)
 "qOK" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -119473,7 +119489,7 @@
 /turf/open/floor/wood,
 /area/service/library/abandoned)
 "uDK" = (
-/obj/effect/landmark/event_spawn,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
 "uEd" = (
@@ -124915,15 +124931,6 @@
 /obj/effect/spawner/structure/window/reinforced/tinted,
 /turf/open/floor/plating,
 /area/commons/dorms)
-"wlL" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/turf/open/floor/plasteel,
-/area/engineering/atmos)
 "wlQ" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -126691,6 +126698,15 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/cargo/miningoffice)
+"wMC" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel,
+/area/engineering/atmos)
 "wME" = (
 /obj/machinery/teleport/station,
 /obj/machinery/status_display/evac{
@@ -154987,7 +155003,7 @@ tbI
 tbI
 ilG
 hbc
-iLR
+oLK
 qjg
 qjg
 jpT
@@ -157785,9 +157801,9 @@ rXt
 mIZ
 pNx
 roN
-oLK
-oLK
-oLK
+uDK
+uDK
+uDK
 wgf
 pNx
 nOp
@@ -158040,7 +158056,7 @@ jwT
 mUI
 nHx
 fEq
-ptr
+pqf
 fIq
 vFc
 mJU
@@ -158297,7 +158313,7 @@ eAA
 lfN
 oUP
 izE
-uDK
+qOk
 lXg
 lXg
 lXg
@@ -158551,7 +158567,7 @@ tVu
 lUA
 xrk
 oKJ
-wlL
+wMC
 nVm
 tbP
 mbX
