@@ -2443,15 +2443,10 @@
 /area/security/brig)
 "amh" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/cmo";
-	dir = 1;
-	name = "CMO Office APC";
-	pixel_x = -25
-	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/apc/auto_name/west,
 /turf/open/floor/plating,
 /area/command/heads_quarters/cmo)
 "ami" = (
@@ -13492,13 +13487,8 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
-	areastring = "/area/science/robotics/mechbay";
-	dir = 4;
-	name = "Mech Bay APC";
-	pixel_x = 24
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
 "bgp" = (
