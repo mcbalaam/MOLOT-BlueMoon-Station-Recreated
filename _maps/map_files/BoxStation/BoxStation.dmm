@@ -24947,7 +24947,17 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bJJ" = (
-)
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/command/heads_quarters/cmo)
 "bJK" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -44209,18 +44219,6 @@
 /obj/item/clothing/mask/gas/owl_mask,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"fhE" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/cafeteria,
-/area/command/heads_quarters/cmo)
 "fia" = (
 /obj/structure/chair{
 	pixel_y = -2
@@ -112706,7 +112704,7 @@ bon
 bzp
 waB
 bEh
-fhE
+bJJ
 bCW
 bDS
 bFN
@@ -113220,7 +113218,7 @@ bon
 bzd
 bCY
 bzn
-fhE
+bJJ
 bCY
 bGZ
 bBN
@@ -124548,7 +124546,7 @@ pYQ
 mLS
 qIO
 qSF
-bJJ
+cOe
 tTc
 vxh
 cNW
