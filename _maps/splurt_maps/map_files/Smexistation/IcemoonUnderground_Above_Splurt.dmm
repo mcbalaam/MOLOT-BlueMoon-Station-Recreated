@@ -17505,6 +17505,13 @@
 	icon_state = "wood-broken"
 	},
 /area/maintenance/bar)
+"oNw" = (
+/obj/machinery/camera{
+	c_tag = "Medbay Break Room";
+	network = list("ss13","medbay")
+	},
+/turf/open/floor/iron/white,
+/area/medical/medbay/zone2)
 "oNI" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -49697,7 +49704,7 @@ fsn
 qFY
 nKm
 lIp
-xRs
+oNw
 faa
 faa
 xRs
