@@ -65,11 +65,6 @@
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/bluemoon/listeningstation)
 "aj" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8;
-	icon_state = "ledge_alt";
-	pixel_y = 16
-	},
 /obj/structure/fluff/railing/corner{
 	dir = 1
 	},
@@ -1836,10 +1831,6 @@
 	dir = 4;
 	icon_state = "bot_white"
 	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4;
-	icon_state = "ledge"
-	},
 /obj/item/paper/fluff/ruins/listeningstation/odd_report,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/bluemoon/listeningstation)
@@ -2360,11 +2351,6 @@
 	dir = 4;
 	icon_state = "bot_white"
 	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 1;
-	icon_state = "ledge_alt";
-	pixel_y = 16
-	},
 /obj/item/paper/fluff/ruins/listeningstation/reports/april,
 /obj/item/paper/fluff/ruins/listeningstation/reports/may,
 /obj/item/paper/fluff/ruins/listeningstation/reports/june,
@@ -2695,11 +2681,6 @@
 	extended_inventory = 1
 	},
 /obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/stripes/corner{
-	dir = 2;
-	icon_state = "ledge_alt";
-	pixel_y = 16
-	},
 /obj/effect/turf_decal/trimline/dark_red/line{
 	dir = 4
 	},
