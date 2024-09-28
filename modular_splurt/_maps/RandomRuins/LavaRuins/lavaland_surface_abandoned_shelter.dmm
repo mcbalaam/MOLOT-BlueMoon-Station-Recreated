@@ -26,10 +26,9 @@
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge)
 "cZ" = (
-/obj/item/tank/internals/oxygen,
-/obj/item/clothing/mask/breath,
+/obj/item/storage/bag/ore,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/awaymission/challenge)
+/area/lavaland/surface/outdoors)
 "dw" = (
 /obj/item/pickaxe,
 /obj/item/mining_scanner,
@@ -66,6 +65,8 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/awaymission/challenge)
 "gy" = (
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/airless{
 	icon_state = "damaged5"
 	},
@@ -203,6 +204,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/awaymission/challenge)
 "wk" = (
@@ -265,10 +267,11 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/awaymission/challenge)
 "Dr" = (
-/obj/structure/girder,
-/obj/effect/mapping_helpers/no_lava,
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/obj/item/tank/internals/oxygen,
+/turf/open/floor/plasteel/airless{
+	icon_state = "damaged2"
+	},
+/area/awaymission/challenge)
 "Dz" = (
 /obj/effect/mapping_helpers/no_lava,
 /obj/effect/mapping_helpers/no_lava,
@@ -636,7 +639,7 @@ ha
 Qn
 Dz
 zr
-vC
+Dr
 SU
 wk
 zr
@@ -672,7 +675,7 @@ QQ
 ha
 Qn
 UA
-cZ
+LC
 QN
 gy
 zr
@@ -854,9 +857,9 @@ QQ
 ch
 dw
 bp
+cZ
 ha
-Qn
-Qn
+ha
 Qn
 Qn
 Qn
@@ -872,9 +875,9 @@ ha
 ha
 Cj
 ha
-Dr
-Qn
-Qn
+Pm
+ha
+ha
 Qn
 Qn
 QQ
@@ -890,7 +893,7 @@ Qn
 Pm
 ha
 ha
-Dr
+Pm
 Qn
 Qn
 Qn
