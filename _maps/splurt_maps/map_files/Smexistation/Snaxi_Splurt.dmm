@@ -6534,9 +6534,12 @@
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bIK" = (
-/turf/open/floor/iron/edge{
-	dir = 4
+/obj/machinery/disposal/bin,
+/obj/effect/turf_decal/bot_white{
+	color = "#ad7617";
+	name = "disposal marker"
 	},
+/turf/open/floor/iron/dark/side,
 /area/commons/fitness/pool)
 "bJf" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -12561,7 +12564,7 @@
 /turf/open/floor/carpet,
 /area/medical/psychology)
 "dXG" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/service/bar)
 "dYa" = (
@@ -13796,12 +13799,7 @@
 /turf/open/floor/wood,
 /area/hallway/secondary/exit/departure_lounge)
 "eAo" = (
-/obj/structure/closet/secure_closet/personal{
-	anchored = 1
-	},
-/obj/effect/turf_decal/bot_white{
-	name = "storage marker"
-	},
+/obj/structure/table,
 /turf/open/floor/iron/dark/corner{
 	dir = 4
 	},
@@ -14112,6 +14110,8 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "eGo" = (
+/obj/machinery/light,
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron/edge{
 	dir = 1
 	},
@@ -15067,9 +15067,10 @@
 /turf/open/floor/grass/grass0,
 /area/service/chapel/main)
 "eYq" = (
-/obj/structure/table,
-/obj/structure/bedsheetbin/towel,
-/turf/open/floor/iron/dark/side,
+/obj/structure/closet/emcloset/wall{
+	dir = 8
+	},
+/turf/closed/wall,
 /area/commons/fitness/pool)
 "eYu" = (
 /obj/item/kirbyplants{
@@ -17815,6 +17816,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/iron,
 /area/cargo/office)
 "gag" = (
@@ -29300,6 +29302,10 @@
 	},
 /area/hallway/secondary/exit/departure_lounge)
 "kqE" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
 "kqV" = (
@@ -30058,6 +30064,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Dormitories Backyard Entrance"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
 "kHP" = (
@@ -31932,6 +31939,7 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
 "lsh" = (
@@ -36431,6 +36439,20 @@
 	},
 /turf/open/floor/iron,
 /area/science/robotics/lab)
+"ndG" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 2
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/dark,
+/obj/structure/chair/stool/bar/directional/west{
+	dir = 2;
+	pixel_y = 9
+	},
+/turf/open/floor/wood,
+/area/service/bar)
 "ndL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -38708,6 +38730,7 @@
 /area/cargo/sorting)
 "nWS" = (
 /obj/effect/turf_decal/bot,
+/obj/machinery/vending/snack/random,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -41812,8 +41835,13 @@
 /turf/closed/wall,
 /area/commons/dorms)
 "pgG" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/iron/edge,
 /area/commons/fitness/pool)
 "phd" = (
 /obj/effect/turf_decal/trimline/white/line{
@@ -45752,6 +45780,11 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_large{
+	name = "Upper Pool Entrance";
+	dir = 8
+	},
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
 "qHO" = (
@@ -46807,6 +46840,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Dormitories Backyard Entrance"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
 "rbC" = (
@@ -50108,9 +50142,8 @@
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/engineering/main)
 "slq" = (
-/obj/item/stack/tile/plasteel/shower_drain,
 /obj/machinery/shower/directional/east,
-/turf/open/floor/iron/small,
+/turf/open/floor/plasteel/showroomfloor/shower,
 /area/commons/dorms)
 "slw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -52267,7 +52300,8 @@
 /area/hallway/primary/starboard/fore)
 "tfx" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
-/obj/effect/landmark/event_spawn,
+/obj/machinery/vending/snack/random,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/cargo/office)
 "tfM" = (
@@ -52408,9 +52442,8 @@
 	},
 /area/cargo/storage)
 "tiO" = (
-/obj/item/stack/tile/plasteel/shower_drain,
 /obj/machinery/shower/directional/west,
-/turf/open/floor/iron/small,
+/turf/open/floor/plasteel/showroomfloor/shower,
 /area/commons/dorms)
 "tiV" = (
 /turf/open/floor/iron/kitchen/herringbone,
@@ -55781,6 +55814,10 @@
 	dir = 4
 	},
 /area/service/library)
+"uAY" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/hallway/primary/starboard/aft)
 "uBa" = (
 /turf/open/floor/plasteel{
 	icon_state = "large_wood-broken3"
@@ -60046,6 +60083,20 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/command/heads_quarters/captain)
+"wbW" = (
+/obj/effect/turf_decal/trimline/white/end{
+	dir = 2
+	},
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_large{
+	name = "Upper Pool Locker Room";
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/commons/fitness/pool)
 "wck" = (
 /obj/structure/closet,
 /obj/item/storage/book/bible,
@@ -60897,6 +60948,10 @@
 	},
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_large{
+	name = "Dormitories Backyard Entrance"
 	},
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
@@ -62890,6 +62945,7 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/commons/fitness/pool)
 "xfD" = (
@@ -63560,6 +63616,8 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "xrL" = (
+/obj/machinery/vending/snack/random,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -65796,11 +65854,8 @@
 /turf/open/floor/wood,
 /area/service/chapel/main)
 "yjJ" = (
-/obj/machinery/disposal/bin,
-/obj/effect/turf_decal/bot_white{
-	color = "#ad7617";
-	name = "disposal marker"
-	},
+/obj/structure/table,
+/obj/structure/bedsheetbin/towel,
 /turf/open/floor/iron/dark/corner,
 /area/commons/fitness/pool)
 "yjK" = (
@@ -96822,15 +96877,15 @@ ydp
 ydp
 rta
 wyk
-bIK
+cBZ
 mpa
 xAv
 xAv
-rta
+xAv
 xAv
 xAv
 ftv
-bIK
+cBZ
 kqE
 rta
 xnm
@@ -97077,7 +97132,7 @@ qxq
 qxq
 qxq
 qxq
-pgG
+vbl
 eJC
 sDm
 axL
@@ -97088,8 +97143,8 @@ xAv
 xAv
 axL
 gnJ
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 avT
@@ -97334,7 +97389,7 @@ qxq
 qxq
 lsK
 qxq
-pgG
+vbl
 eJC
 aDo
 xAv
@@ -97345,8 +97400,8 @@ xAv
 xAv
 xAv
 qwY
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 avT
@@ -97591,7 +97646,7 @@ jxH
 qxq
 qxq
 fRh
-pgG
+vbl
 eJC
 aDo
 xAv
@@ -97602,8 +97657,8 @@ xAv
 xAv
 xAv
 qwY
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 ydp
@@ -97849,7 +97904,7 @@ cJM
 qxq
 qxq
 rta
-eJC
+pgG
 aDo
 xAv
 xAv
@@ -98106,7 +98161,7 @@ aCD
 wQx
 qxq
 rta
-eJC
+pgG
 aDo
 xAv
 xAv
@@ -98362,7 +98417,7 @@ bMm
 aCD
 alm
 qxq
-pgG
+vbl
 eJC
 aDo
 xAv
@@ -98373,8 +98428,8 @@ xAv
 xAv
 xAv
 qwY
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 avT
@@ -98619,7 +98674,7 @@ aCD
 cav
 qxq
 qxq
-pgG
+vbl
 eJC
 aDo
 xAv
@@ -98630,8 +98685,8 @@ xAv
 xAv
 xAv
 qwY
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 avT
@@ -98876,7 +98931,7 @@ bgV
 qxq
 qxq
 fRh
-pgG
+vbl
 eJC
 aDo
 xAv
@@ -98887,8 +98942,8 @@ xAv
 xAv
 xAv
 qwY
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 ydp
@@ -99134,7 +99189,7 @@ gEZ
 fRh
 qxq
 rta
-eJC
+pgG
 aDo
 xAv
 xAv
@@ -99391,7 +99446,7 @@ lQJ
 qxq
 qxq
 rta
-eJC
+pgG
 aDo
 xAv
 xAv
@@ -99647,7 +99702,7 @@ fRh
 qxq
 fRh
 qxq
-pgG
+vbl
 eJC
 aDo
 xAv
@@ -99658,8 +99713,8 @@ xAv
 xAv
 xAv
 qwY
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 ydp
@@ -99904,7 +99959,7 @@ fRh
 qxq
 qxq
 qxq
-pgG
+vbl
 eJC
 dQI
 nAm
@@ -99915,8 +99970,8 @@ nAm
 nAm
 nAm
 nsK
-eGo
-pgG
+tOz
+vbl
 xnm
 avT
 ydp
@@ -100161,19 +100216,19 @@ fRh
 fRh
 hyM
 qxq
-pgG
-wyk
-oui
-oui
-oui
-oui
-oui
-oui
-oui
-oui
-oui
+vbl
 kqE
-pgG
+aUC
+aUC
+aUC
+aUC
+aUC
+aUC
+aUC
+oui
+aUC
+dot
+vbl
 xnm
 avT
 ydp
@@ -100427,8 +100482,8 @@ eei
 jIK
 jIK
 tFm
-kqE
-kqE
+wyk
+dot
 yjJ
 rta
 xnm
@@ -100679,7 +100734,7 @@ rta
 rta
 rta
 rta
-rta
+eYq
 rta
 rta
 rta
@@ -100943,7 +100998,7 @@ fUP
 rta
 pyK
 tOz
-eYq
+cBR
 rta
 xnm
 avT
@@ -101457,7 +101512,7 @@ ltP
 dYL
 uaM
 dot
-cBR
+bIK
 rta
 xnm
 jXt
@@ -101967,7 +102022,7 @@ rta
 rta
 rta
 xfs
-qHL
+wbW
 rta
 rta
 iJs
@@ -110443,7 +110498,7 @@ fYH
 oln
 gFP
 stW
-iKV
+ndG
 vbJ
 oNv
 lRX
@@ -113020,7 +113075,7 @@ mgo
 dXG
 rxj
 vEj
-ltG
+uAY
 mWJ
 cDW
 pOU
