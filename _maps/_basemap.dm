@@ -18,6 +18,8 @@
 		#include "map_files\TauStation\TauStation.dmm"
 		#include "splurt_maps\map_files\Smexistation\Snaxi_Splurt.dmm"
 		#include "map_files\PrisonStation\PrisonStation.dmm"
+		// BLUEMOON EDIT
+		#include "bluemoon_maps\map_files\IceMoonStation\icemoonstation.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
