@@ -183,10 +183,7 @@
 	    //prevents remote "kicks" with TK
 		if (!Adjacent(user))
 			return
-		user.visible_message(span_danger("[user] kicks the display case."), null, null, COMBAT_MESSAGE_RANGE)
-		log_combat(user, src, "kicks")
-		user.do_attack_animation(src, ATTACK_EFFECT_KICK)
-		take_damage(2)
+		to_chat(user, span_notice("You poke the [src] glass."))
 
 /obj/structure/displaycase_chassis
 	anchored = TRUE

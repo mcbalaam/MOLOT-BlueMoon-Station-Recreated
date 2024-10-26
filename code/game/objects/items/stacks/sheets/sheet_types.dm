@@ -252,9 +252,9 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
  * Wood
  */
 GLOBAL_LIST_INIT(wood_recipes, list ( \
-	new/datum/stack_recipe("Wooden Sandals", /obj/item/clothing/shoes/sandal, 1), \
-	new/datum/stack_recipe("Sauna Oven", /obj/structure/sauna_oven, 50, time = 15 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("Wooden Half-Barricade", /obj/structure/deployable_barricade/wooden, 5, time = 2 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("wooden sandals", /obj/item/clothing/shoes/sandal, 1), \
+	new/datum/stack_recipe("sauna oven", /obj/structure/sauna_oven, 50, time = 15 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("wooden half-barricade", /obj/structure/deployable_barricade/wooden, 5, time = 2 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("tiki mask", /obj/item/clothing/mask/gas/tiki_mask, 2), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/wood, 2, time = 10), \
 	null, \
@@ -302,6 +302,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("painting frame", /obj/item/wallframe/painting, 1, time = 10),\
 	new/datum/stack_recipe("urn", /obj/item/reagent_containers/glass/mortar/urn, 3), \
 	new/datum/stack_recipe("honey frame", /obj/item/honey_frame, 5, time = 10),\
+	new/datum/stack_recipe("notice board frame", /obj/item/wallframe/noticeboard, 5, time = 10),\
 	))
 
 /obj/item/stack/sheet/mineral/wood
