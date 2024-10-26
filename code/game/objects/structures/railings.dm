@@ -99,8 +99,7 @@
 	if(!loc) //quick check if it's qdeleted already.
 		return
 	if(!(flags_1 & NODECONSTRUCT_1))
-		var rod = new /obj/item/stack/rods(loc, 2)
-		transfer_fingerprints_to(rod)
+		new /obj/item/stack/rods(loc, 2)
 		qdel(src)
 ///Implements behaviour that makes it possible to unanchor the railing.
 /obj/structure/railing/wrench_act(mob/living/user, obj/item/I)
