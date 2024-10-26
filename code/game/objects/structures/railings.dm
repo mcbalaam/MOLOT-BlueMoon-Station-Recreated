@@ -6,8 +6,7 @@
 	density = TRUE
 	anchored = TRUE
 	climbable = TRUE
-	plane = ABOVE_GAME_PLANE
-	layer = RAILING_LAYER
+	layer = ABOVE_ALL_MOB_LAYER
 	///Initial direction of the railing.
 	var/ini_dir
 
@@ -57,16 +56,18 @@
 
 	var/static/list/tool_behaviors = list(
 		TOOL_WELDER = list(
-			SCREENTIP_CONTEXT_LMB = "Repair",
+			SCREENTIP_CONTEXT_LMB = list(INTENT_HELP = "Repair"),
 		),
 		TOOL_WRENCH = list(
-			SCREENTIP_CONTEXT_LMB = "Anchor/Unanchor",
+			SCREENTIP_CONTEXT_LMB = list(INTENT_ANY = "Anchor/Unanchor"),
 		),
-		TOOL_WIRECUTTER = list(
-			SCREENTIP_CONTEXT_LMB = "Deconstruct",
-		),
+		TOOL_WIRECUTTER= list(
+			SCREENTIP_CONTEXT_LMB = list(INTENT_ANY = "Cut"),
+		)
 	)
+
 	AddElement(/datum/element/contextual_screentip_tools, tool_behaviors)
+
 	RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_change_layer))
 	adjust_dir_layer(dir)
 
@@ -98,7 +99,7 @@
 	if(!loc) //quick check if it's qdeleted already.
 		return
 	if(!(flags_1 & NODECONSTRUCT_1))
-		var/obj/item/stack/rods/rod = new /obj/item/stack/rods(drop_location(), 3)
+		var rod = new /obj/item/stack/rods(loc, 2)
 		transfer_fingerprints_to(rod)
 		qdel(src)
 ///Implements behaviour that makes it possible to unanchor the railing.

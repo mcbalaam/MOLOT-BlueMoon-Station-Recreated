@@ -3,7 +3,7 @@
 /obj/structure/noticeboard
 	name = "notice board"
 	desc = "A board for pinning important notices upon. It is made of the finest Spanish cork."
-	icon = 'icons/obj/wallmounts2.dmi'
+	icon = 'icons/obj/wallmounts.dmi'
 	icon_state = "noticeboard"
 	density = FALSE
 	anchored = TRUE
@@ -17,8 +17,12 @@
 	if(building)
 		setDir(ndir)
 
-	if(!mapload)
-		return
+	var/static/list/tool_behaviors = list(
+		TOOL_WRENCH = list(
+			SCREENTIP_CONTEXT_LMB = list(INTENT_ANY = "Detach"),
+		)
+	)
+	AddElement(/datum/element/contextual_screentip_tools, tool_behaviors)
 
 	for(var/obj/item/I in loc)
 		if(notices >= MAX_NOTICES)
@@ -128,7 +132,7 @@
 /obj/item/wallframe/noticeboard
 	name = "notice board"
 	desc = "Right now it's more of a clipboard. Attach to a wall to use."
-	icon = 'icons/obj/wallmounts2.dmi'
+	icon = 'icons/obj/wallframe.dmi'
 	icon_state = "noticeboard"
 	pixel_shift = -32
 	custom_materials = list(
