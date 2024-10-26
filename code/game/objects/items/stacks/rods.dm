@@ -1,12 +1,17 @@
 GLOBAL_LIST_INIT(rod_recipes, list ( \
-	new/datum/stack_recipe("Grille", /obj/structure/grille, 2, time = 10, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("Table Frame", /obj/structure/table_frame, 2, time = 10, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("Scooter Frame", /obj/item/scooter_frame, 10, time = 25, one_per_turf = 0), \
-	new/datum/stack_recipe("Railing", /obj/structure/railing, 3, time = 18, window_checks = TRUE), \
-	new/datum/stack_recipe("Catwalk Tile", /obj/item/stack/tile/catwalk, 1, 4, 20), \
-	new/datum/stack_recipe("Guard Rail", /obj/structure/deployable_barricade/guardrail, 2, time = 1 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("Tank Holder", /obj/structure/tank_holder, 2, time = 5, one_per_turf = TRUE, on_floor = FALSE), \
-	new/datum/stack_recipe("Glasses Frame", /obj/item/glasswork/glass_base/glasses_frame, 3, 1, 1, 30 SECONDS), \
+	new/datum/stack_recipe("grille", /obj/structure/grille, 2, time = 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("table frame", /obj/structure/table_frame, 2, time = 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("scooter frame", /obj/item/scooter_frame, 10, time = 25, one_per_turf = 0), \
+	new/datum/stack_recipe("catwalk tile", /obj/item/stack/tile/catwalk, 1, 4, 20), \
+	new/datum/stack_recipe("guard rail", /obj/structure/deployable_barricade/guardrail, 2, time = 1 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe("tank holder", /obj/structure/tank_holder, 2, time = 5, one_per_turf = TRUE, on_floor = FALSE), \
+	new/datum/stack_recipe("glasses frame", /obj/item/glasswork/glass_base/glasses_frame, 3, 1, 1, 30 SECONDS), \
+	new /datum/stack_recipe_list("railing", list( \
+		new/datum/stack_recipe("railing", /obj/structure/railing, 2, time = 18, window_checks = TRUE), \
+		new/datum/stack_recipe("railing", /obj/structure/railing/corner, 2, time = 18, window_checks = TRUE), \
+		new/datum/stack_recipe("railing", /obj/structure/railing/corner/end, 2, time = 18, window_checks = TRUE), \
+		new/datum/stack_recipe("railing", /obj/structure/railing/corner/end/flip, 2, time = 18, window_checks = TRUE), \
+	)), \
 	))
 
 /obj/item/stack/rods
