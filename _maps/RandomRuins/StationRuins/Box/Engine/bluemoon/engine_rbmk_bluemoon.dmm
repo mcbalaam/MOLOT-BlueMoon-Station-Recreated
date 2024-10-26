@@ -510,6 +510,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/structure/noticeboard/directional/east,
 /obj/structure/table/reinforced,
 /obj/machinery/microwave{
 	pixel_x = -3;
