@@ -1012,6 +1012,15 @@
 	custom_materials = list(/datum/material/iron=2000)
 	var/building = FALSE
 
+/obj/item/shelf_parts
+	name = "shelf parts"
+	desc = "Parts of a shelf."
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "rack_parts"
+	flags_1 = CONDUCT_1
+	custom_materials = list(/datum/material/iron=2000)
+	var/building = FALSE
+
 /obj/item/rack_parts/attackby(obj/item/W, mob/user, params)
 	if(W.tool_behaviour == TOOL_WRENCH)
 		new /obj/item/stack/sheet/metal(user.loc)
@@ -1028,6 +1037,28 @@
 		if(!user.temporarilyRemoveItemFromInventory(src))
 			return
 		var/obj/structure/rack/R = new /obj/structure/rack(user.loc)
+		user.visible_message("<span class='notice'>[user] assembles \a [R].\
+			</span>", "<span class='notice'>You assemble \a [R].</span>")
+		R.add_fingerprint(user)
+		qdel(src)
+	building = FALSE
+
+/obj/item/shelf_parts/attackby(obj/item/W, mob/user, params)
+	if(W.tool_behaviour == TOOL_WRENCH)
+		new /obj/item/stack/sheet/metal(user.loc)
+		qdel(src)
+	else
+		. = ..()
+
+/obj/item/shelf_parts/attack_self(mob/user)
+	if(building)
+		return
+	building = TRUE
+	to_chat(user, "<span class='notice'>You start constructing a rack...</span>")
+	if(do_after(user, 50, target = user, progress=TRUE))
+		if(!user.temporarilyRemoveItemFromInventory(src))
+			return
+		var/obj/structure/rack/shelf/R = new /obj/structure/rack/shelf(user.loc)
 		user.visible_message("<span class='notice'>[user] assembles \a [R].\
 			</span>", "<span class='notice'>You assemble \a [R].</span>")
 		R.add_fingerprint(user)

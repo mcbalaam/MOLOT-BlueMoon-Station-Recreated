@@ -61,7 +61,8 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		new/datum/stack_recipe("purple comfy chair", /obj/structure/chair/comfy/purple, 2, one_per_turf = TRUE, on_floor = TRUE), \
 		)), \
 	null, \
-	new/datum/stack_recipe("rack parts", /obj/item/rack_parts), \
+	new/datum/stack_recipe("rack parts", /obj/item/rack_parts, 3), \
+	new/datum/stack_recipe("shelf parts", /obj/item/shelf_parts, 5), \
 	new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 	null, \
 	new/datum/stack_recipe("canister", /obj/machinery/portable_atmospherics/canister, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
