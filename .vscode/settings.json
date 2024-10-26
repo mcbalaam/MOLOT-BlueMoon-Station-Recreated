@@ -13,7 +13,8 @@
 		"source.fixAll.eslint": "explicit"
 	},
 	"workbench.editorAssociations": {
-		"*.dmi": "dmiEditor.dmiEditor"
+		"*.dmi": "default",
+		"*.rsc": "default"
 	},
 	"files.eol": "\n",
 	"gitlens.advanced.blame.customArguments": ["-w"],

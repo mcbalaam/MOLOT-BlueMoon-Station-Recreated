@@ -146,6 +146,18 @@
 	if(notices)
 		. += "notices_[notices]"
 
+/obj/structure/noticeboard/directional/north
+	pixel_y = 32
+
+/obj/structure/noticeboard/directional/south
+	pixel_y = -32
+
+/obj/structure/noticeboard/directional/east
+	pixel_x = 32
+
+/obj/structure/noticeboard/directional/west
+	pixel_x = -32
+
 /obj/structure/noticeboard/captain
 	name = "Captain's Notice Board"
 	desc = "Important notices from the Captain."
