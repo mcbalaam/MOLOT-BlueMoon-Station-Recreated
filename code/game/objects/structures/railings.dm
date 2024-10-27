@@ -6,16 +6,9 @@
 	density = TRUE
 	anchored = TRUE
 	climbable = TRUE
-	layer = ABOVE_ALL_MOB_LAYER
+	layer = RAILING_LAYER
 	///Initial direction of the railing.
 	var/ini_dir
-
-/datum/armor/structure_railing
-	melee = 35
-	bullet = 50
-	laser = 50
-	energy = 100
-	bomb = 10
 
 /obj/structure/railing/unbreakable
 	resistance_flags = INDESTRUCTIBLE
