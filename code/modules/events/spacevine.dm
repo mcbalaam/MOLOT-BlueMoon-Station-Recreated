@@ -114,6 +114,25 @@
 	if(!isvineimmune(eater))
 		eater.reagents.add_reagent_list(list(/datum/reagent/drug/labebium = 10))
 
+/datum/spacevine_mutation/krapiva
+	name = "krapiva"
+	hue = "#04ff00"
+	severity = 10
+	quality = NEGATIVE
+
+/datum/spacevine_mutation/krapiva/on_cross(obj/structure/spacevine/holder, mob/living/crosser)
+	if(prob(severity) && istype(crosser) && !isvineimmune(crosser))
+		var/mob/living/M = crosser
+		M.adjustFireLoss(5)
+		to_chat(M, span_alert("You cut yourself on the krapiva vines."))
+
+/datum/spacevine_mutation/krapiva/on_hit(obj/structure/spacevine/holder, mob/living/hitter, obj/item/I, expected_damage)
+	if(prob(severity) && istype(hitter) && !isvineimmune(hitter))
+		var/mob/living/M = hitter
+		M.adjustFireLoss(5)
+		to_chat(M, span_alert("You cut yourself on the krapiva vines."))
+	. = expected_damage
+
 /datum/spacevine_mutation/explosive  //OH SHIT IT CAN CHAINREACT RUN!!!
 	name = "explosive"
 	hue = "#ff0000"
@@ -426,10 +445,10 @@
 /datum/spacevine_controller
 	var/list/obj/structure/spacevine/vines
 	var/list/growth_queue
-	var/spread_multiplier = 5
-	var/spread_cap = 30
+	var/spread_multiplier = 20
+	var/spread_cap = 120
 	var/list/vine_mutations_list
-	var/mutativeness = 1
+	var/mutativeness = 5
 
 /datum/spacevine_controller/New(turf/location, list/muts, potency, production, datum/round_event/event = null)
 	vines = list()
