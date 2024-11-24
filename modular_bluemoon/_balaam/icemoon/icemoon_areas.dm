@@ -14,7 +14,7 @@
 	icon_state = "glacier_hsec"
 
 /area/ruin/icemoon/unpowered/glacier/outsidestorage	
-	name = "OP 'Glacier' | Primary Hallway"
+	name = "OP 'Glacier' | Outer Storage"
 	icon_state = "glacier_ostor"
 
 /area/ruin/icemoon/unpowered/glacier/engineering

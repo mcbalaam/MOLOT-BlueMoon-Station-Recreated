@@ -2,9 +2,9 @@
 	"map_name": "IceMoon Station",
 	"map_path": "bluemoon_maps/map_files/IceMoonStation",
 	"map_file": "icemoonstation.dmm",
-	"station_ruin_budget":0,
-	"space_ruin_levels":0,
-	"space_empty_levels":0,
+	"station_ruin_budget": 0,
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
 	"planetary": 1,
 	"shuttles": {
 		"cargo": "cargo_box",
@@ -14,33 +14,30 @@
 	},
 	"traits": [
 		{
-			"Down": true,
-			"Mining": true,
-			"Linkage": null,
-			"Gravity": true,
-			"Ice Ruins": true,
-			"Weather_Snowstorm": true,
-			"Baseturf": "/turf/open/openspace/icemoon",
-			"No Parallax": true
-		},
-		{
-			"Up": true,
+			"Up": 1,
 			"Mining": true,
 			"Linkage": null,
 			"Gravity": true,
 			"Ice Ruins Underground": true,
-			"Baseturf": "/turf/open/lava/plasma/ice_moon",
-			"No Parallax": true
+			"Baseturf": "/turf/open/lava/plasma/ice_moon"
 		},
 		{
-			"Down": true,
-			"Up": true,
-			"Mining": true,
-			"Linkage": null,
-			"Gravity": true,
-			"Ice Ruins Underground": true,
-			"Baseturf": "/turf/open/openspace/icemoon",
-			"No Parallax": true
+			"Down":-1,
+			"Up":1,
+			"Mining":true,
+			"Linkage":null,
+			"Gravity":true,
+			"Ice Ruins Underground":true,
+			"Baseturf":"/turf/open/openspace/icemoon"
+		},
+		{
+			"Down":-1,
+			"Mining":true,
+			"Linkage":null,
+			"Gravity":true,
+			"Ice Ruins":true,
+			"Weather_Snowstorm":true,
+			"Baseturf":"/turf/open/floor/plating/asteroid/snow/icemoon"
 		}
 	],
 	"minetype": "none"
