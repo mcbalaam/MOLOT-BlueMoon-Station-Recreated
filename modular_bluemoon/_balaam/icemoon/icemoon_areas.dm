@@ -1,6 +1,6 @@
 /area/ruin/icemoon/unpowered
 	name = "IceMoon Ruin"
-	icon = './modular_bluemoon/_balaam/icemoon_areas.dmi'
+	icon = './modular_bluemoon/_balaam/icemoon/icemoon_areas.dmi'
 	icon_state = "dk_yellow"
 	always_unpowered = FALSE
 
