@@ -88,8 +88,6 @@ map lambdastation
 minplayers 70
 endmap
 
-// BLUEMOON EDIT
-map bluemoon_maps/icemoonstation
+map icemoonstation
 minplayers 30
 endmap
-// BLUEMOON EDIT END
