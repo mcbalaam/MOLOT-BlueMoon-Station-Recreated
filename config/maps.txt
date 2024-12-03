@@ -46,6 +46,10 @@ default
 minplayers 70
 endmap
 
+map smexistation
+minplayers 70
+endmap
+
 #map runtimestation
 #endmap
 
