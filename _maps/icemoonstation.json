@@ -15,19 +15,29 @@
 	"traits": [
 		{
 			"Up": 1,
-			"Baseturf": "/turf/open/openspace",
-			"Linkage": "null"
+			"Baseturf": "/turf/open/lava/plasma/ice_moon",
+			"Ice Ruins Underground": true,
+			"Linkage": "null",
+			"Mining": true,
+			"Gravity": true
 		},
 		{
 			"Up": 1,
 			"Down": -1,
-			"Baseturf": "/turf/open/openspace",
-			"Linkage": "null"
+			"Baseturf": "/turf/open/openspace/icemoon",
+			"Ice Ruins Underground": true,
+			"Linkage": "null",
+			"Mining": true,
+			"Gravity": true
 		},
 		{
 			"Down": -1,
 			"Baseturf": "/turf/open/openspace",
-			"Linkage": "null"
+			"Ice Ruins Underground": true,
+			"Weather_Snowstorm": true,
+			"Linkage": "null",
+			"Mining": true,
+			"Gravity": true
 		}
 	],
 	"minetype": "none"
