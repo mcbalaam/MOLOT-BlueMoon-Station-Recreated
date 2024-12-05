@@ -1662,7 +1662,15 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				H.Jitter(5)
 			hunger_rate = 3 * HUNGER_FACTOR
 		hunger_rate *= H.physiology.hunger_mod
-		H.adjust_nutrition(-hunger_rate)
+
+		// SANDSTORM EDIT
+		if (H.client)
+			H.adjust_nutrition(-hunger_rate)
+		else
+			// Do not allow SSD players to get too hungry.
+			if (H.nutrition >= NUTRITION_LEVEL_FED)
+				H.adjust_nutrition(-hunger_rate)
+		// End of sandstorm edit
 
 
 	if (H.nutrition > NUTRITION_LEVEL_FULL)
@@ -1957,8 +1965,15 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 		playsound(target.loc, 'sound/weapons/slap.ogg', 50, 1, -1)
 		user.do_attack_animation(target, ATTACK_EFFECT_ASS_SLAP)
+		// BLUEMOON EDIT START - бронируем задницы
 		if(HAS_TRAIT(target, TRAIT_STEEL_ASS))
-			user.adjustStaminaLoss(50)
+			if(prob(25))
+				var/obj/item/bodypart/bodypart = user.get_active_hand()
+				if(istype(bodypart))
+					var/datum/wound/blunt/moderate/moderate_wound = new
+					moderate_wound.apply_wound(bodypart)
+			user.adjustStaminaLoss(75)
+			user.Stun(3 SECONDS)
 			user.visible_message(\
 				span_danger("\The [user] slaps \the [target]'s ass, but their hand bounces off like they hit metal!"),\
 				span_danger("You slap [user == target ? "your" : "\the [target]'s"] ass, but feel an intense amount of pain as you realise their buns are harder than steel!"),\
@@ -1969,8 +1984,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				'modular_splurt/sound/effects/pan1.ogg'
 			)
 			playsound(target.loc, pick(ouchies), 15, 1, -1)
-			user.emote("scream")
+			if(!isrobotic(user))
+				user.emote("scream")
 			return FALSE
+		// BLUEMOON EDIT END
 		//SPLURT ADDITION START
 		if(HAS_TRAIT(target, TRAIT_JIGGLY_ASS))
 			if(!COOLDOWN_FINISHED(src, ass))
@@ -2429,7 +2446,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			H.damageoverlaytemp = 20
 			var/damage_amount
 			if (HAS_TRAIT(H, TRAIT_TOUGHT) && !forced) // проверка на трейт стойкости
-				if (damage <= 10) //если урон до применения модификаторов не привышает 10, то он не учитывается
+				if (damage < 10) //если урон до применения модификаторов не привышает 10, то он не учитывается
 					if(HAS_TRAIT(H, TRAIT_ROBOTIC_ORGANISM))
 						H.visible_message(span_warning("Корпус [H] слишком прочный, удар не повредил его!"), span_notice("Корпус нивелирует наносимые повреждения."))
 					else

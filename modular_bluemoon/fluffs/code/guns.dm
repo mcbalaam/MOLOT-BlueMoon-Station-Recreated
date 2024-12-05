@@ -386,6 +386,45 @@
 
 /////////////////////////////////////////////////////////////////////////////////////
 
+/obj/item/modkit/razorsong_kit
+	name = "Razorsong MK-III Kit"
+	desc = "A modkit for making an stunbaton into a Razorsong MK-III."
+	product = /obj/item/melee/baton/razorsong
+	fromitem = list(/obj/item/melee/baton, /obj/item/melee/baton/loaded)
+
+/obj/item/melee/baton/razorsong
+	name = "Razorsong MK-III"
+	desc = "A telescopic katana made of vibrating steel. The mechanism is very simple, but quite very sturdy. About 100 copies were made in production, because the limited material would not allow making many of these melee weapons. But this instance is the Razorsong MK-III, a more homemade modified version designed to work in the Security Service for non-lethal close-range combat."
+	item_state = "razorsong"
+	icon_state = "razorsong"
+	icon = 'modular_bluemoon/fluffs/icons/obj/guns.dmi'
+	lefthand_file = 'modular_bluemoon/fluffs/icons/mob/guns_left.dmi'
+	righthand_file = 'modular_bluemoon/fluffs/icons/mob/guns_right.dmi'
+
+/obj/item/melee/baton/razorsong/switch_status(new_status = FALSE, silent = FALSE)
+	if(turned_on != new_status)
+		turned_on = new_status
+		if(!silent)
+			playsound(loc, 'modular_bluemoon/fluffs/sound/weapon/razorsong.ogg', 75, 1, -1)
+		if(turned_on)
+			START_PROCESSING(SSobj, src)
+		else
+			STOP_PROCESSING(SSobj, src)
+	update_icon()
+
+/obj/item/melee/baton/razorsong/update_icon_state()
+	if(turned_on)
+		icon_state = "razorsong_active"
+		item_state = "razorsong_active"
+	else if(!cell)
+		icon_state = "razorsong_nocell"
+		item_state = "razorsong"
+	else
+		icon_state = "razorsong"
+		item_state = "razorsong"
+
+/////////////////////////////////////////////////////////////////////////////////////
+
 /obj/item/modkit/stunadler_kit
 	name = "Adler stunsword Kit"
 	desc = "A modkit for making an stunbaton into a Adler stunsword."
@@ -573,8 +612,6 @@
 	mag_type = /obj/item/ammo_box/magazine/ak12/r
 	//chosen_icon = 'icons/mob/clothing/back.dmi'
 	icon_state = "G36"
-	fire_delay = 3
-	fire_sound = 'modular_bluemoon/fluffs/sound/shoot.ogg'
 
 /obj/item/gun/ballistic/automatic/ak12/g36/update_icon_state()
 	if(magazine)
@@ -730,3 +767,43 @@
 	desc = "A modkit for making a Heavy crowbar into Heavy pocket hammer."
 	product = /obj/item/crowbar/large/heavy/hammercrowbar
 	fromitem = list(/obj/item/crowbar/large/heavy)
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/item/modkit/dedication_kit
+	name = "Magnetic Pistol Dedication Kit"
+	desc = "A modkit for making an Enforcer into a Magnetic Pistol Dedication."
+	product = /obj/item/gun/ballistic/automatic/pistol/enforcer/dedication
+	fromitem = list(/obj/item/gun/ballistic/automatic/pistol/enforcer/nomag, /obj/item/gun/ballistic/automatic/pistol/enforcer, /obj/item/gun/ballistic/automatic/pistol/enforcerred, /obj/item/gun/ballistic/automatic/pistol/enforcergold)
+
+/obj/item/gun/ballistic/automatic/pistol/enforcer/dedication
+	name = "\improper Magnetic Pistol Dedication"
+	desc = "A magnetic pistol used in all units of Adler's armed peacekeepers. It is mass-produced by the Adler military-industrial complex and has already entered the space trade market. It includes several advantages, for example, an identifier built into the handle, which transmits the remaining ammunition to the interface of the helmet or glasses, which allows better control of the weapon, as well as an integrated sight, which, however, is effective only at close ranges. He usually has a badge corresponding to his military rank, but this one doesn't seem to have any identification marks on it. Most often, because the owner belongs to Adler's foreign armed formations, which are not controlled by the general directorate of corporate officials. For example, he is assigned to a high-ranking officer."
+	icon = 'modular_bluemoon/fluffs/icons/obj/guns.dmi'
+	lefthand_file = 'modular_bluemoon/fluffs/icons/mob/guns_left.dmi'
+	righthand_file = 'modular_bluemoon/fluffs/icons/mob/guns_right.dmi'
+	icon_state = "dedication"
+	item_state = "dedication"
+	fire_sound = 'modular_bluemoon/fluffs/sound/weapon/adlershot.ogg'
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/item/modkit/cleaver_kit
+	name = "Light Officer's Cleaver Kit"
+	desc = "A modkit for making an Enforcer into a Light Officer's Cleaver."
+	product = /obj/item/melee/sabre/cleaver
+	fromitem = list(/obj/item/melee/sabre)
+
+/obj/item/melee/sabre/cleaver
+	name = "\improper Light Officer's Cleaver"
+	desc = "The blade is made of nanoalloys, sharpened with a high-precision laser, a handle with a winding made of special synthetic leather and, of course, an engraving on the blade corresponding to a personal identification code. This is a weapon of the composition of corporate officials and high-ranking military officers of Adler, in order to earn it, each officer must go a long way in the hierarchy or earn high trust from the highest ranks of Adler. There are only 10,000 such swords produced."
+	icon = 'modular_bluemoon/fluffs/icons/obj/guns.dmi'
+	lefthand_file = 'modular_bluemoon/fluffs/icons/mob/guns_left.dmi'
+	righthand_file = 'modular_bluemoon/fluffs/icons/mob/guns_right.dmi'
+	icon_state = "cleaver"
+	item_state = "cleaver"
+
+/obj/item/melee/sabre/cleaver/get_belt_overlay()
+	if(istype(loc, /obj/item/storage/belt/scabbard))
+		return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "cleaver")
+	return ..()
