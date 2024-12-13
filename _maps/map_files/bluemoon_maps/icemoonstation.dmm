@@ -39479,6 +39479,12 @@
 	},
 /obj/machinery/disposal/bin,
 /obj/machinery/light,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
 /turf/open/floor/iron,
 /area/service/hydroponics/garden)
 "hBN" = (
@@ -48636,6 +48642,13 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/icemoon/surface/outdoors)
 "joG" = (
+/obj/structure/flora/grass/jungle,
+/obj/structure/flora/junglebush/large{
+	pixel_y = 5;
+	pixel_x = -18;
+	icon_state = "bush2";
+	layer = 4.72
+	},
 /turf/open/floor/plating/asteroid,
 /area/service/hydroponics/garden)
 "joI" = (
@@ -58319,6 +58332,14 @@
 	dir = 1
 	},
 /area/hallway/primary/fore)
+"lgw" = (
+/obj/structure/flora/junglebush/c,
+/obj/structure/flora/junglebush/large{
+	pixel_y = -5;
+	layer = 4.71
+	},
+/turf/open/floor/plating/asteroid,
+/area/service/hydroponics/garden)
 "lgO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -77212,7 +77233,7 @@
 	icon_state = "bush2";
 	layer = 4.71
 	},
-/turf/open/floor/grass/grass0,
+/turf/open/floor/plating/asteroid,
 /area/commons/cryopod)
 "oNO" = (
 /obj/effect/turf_decal/trimline/brown/end{
@@ -77240,6 +77261,9 @@
 	},
 /obj/effect/turf_decal/trimline/green/corner{
 	dir = 4
+	},
+/obj/structure/railing/corner{
+	dir = 8
 	},
 /turf/open/floor/iron,
 /area/service/hydroponics/garden)
@@ -92121,6 +92145,10 @@
 	dir = 9
 	},
 /obj/effect/turf_decal/trimline/green/corner,
+/obj/structure/railing/corner{
+	dir = 1;
+	layer = 4.73
+	},
 /turf/open/floor/iron,
 /area/service/hydroponics/garden)
 "rGb" = (
@@ -107698,6 +107726,18 @@
 	},
 /turf/open/floor/iron,
 /area/mine/production)
+"uCM" = (
+/obj/machinery/hydroponics/constructable,
+/obj/effect/turf_decal/tile/green/diagonal_centre,
+/obj/effect/turf_decal/bot,
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#e8eaff"
+	},
+/obj/structure/railing,
+/obj/effect/turf_decal/siding/white,
+/turf/open/floor/iron,
+/area/service/hydroponics/garden)
 "uCR" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -108760,7 +108800,7 @@
 	pixel_x = -13;
 	layer = 4.72
 	},
-/turf/open/floor/grass/grass0,
+/turf/open/floor/plating/asteroid,
 /area/commons/cryopod)
 "uMy" = (
 /obj/machinery/atmospherics/components/binary/pump{
@@ -112102,6 +112142,12 @@
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#e8eaff"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/service/hydroponics/garden)
@@ -115999,6 +116045,22 @@
 /obj/structure/lattice/catwalk,
 /turf/open/openspace/icemoon,
 /area/icemoon/surface/outdoors)
+"wkP" = (
+/obj/effect/turf_decal/tile/green/diagonal_centre,
+/obj/effect/turf_decal/bot_white{
+	name = "storage marker"
+	},
+/obj/item/kirbyplants/random{
+	pixel_y = 6
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/service/hydroponics/garden)
 "wkU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -228105,8 +228167,8 @@ vyg
 shf
 vyg
 vyg
-vwR
-joG
+uCM
+lgw
 eWz
 lZS
 cLX
@@ -228355,7 +228417,7 @@ sIY
 kEu
 ntV
 pqA
-tQm
+wkP
 rFZ
 tgp
 tgp
