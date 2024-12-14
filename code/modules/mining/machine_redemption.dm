@@ -255,14 +255,14 @@
 			var/mob/M = usr
 			var/obj/item/card/id/I = M.get_idcard(TRUE)
 			if(points)
-				if(I)
+				if(I && I.mining_support) // BLUEMOON EDIT
 					I.mining_points += points
 					I.mining_points_total += points
 					if(usr.client)
 						usr.client.increment_progress("miner", points)
 					points = 0
 				else
-					to_chat(usr, "<span class='warning'>No ID detected.</span>")
+					to_chat(usr, "<span class='warning'>Unable to process.</span>") // BLUEMOON EDIT
 			else
 				to_chat(usr, "<span class='warning'>No points to claim.</span>")
 			return TRUE

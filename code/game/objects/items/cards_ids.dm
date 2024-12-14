@@ -116,7 +116,7 @@
 /obj/item/card/id/examine_more(mob/user)
 	var/list/msg = list("<span class='notice'><i>You examine [src] closer, and note the following...</i></span>")
 
-	if(mining_points)
+	if(mining_support && mining_points)
 		msg += "There's [mining_points] mining equipment redemption point\s loaded onto this card."
 	if(registered_account)
 		msg += "The account linked to the ID belongs to '[registered_account.account_holder]' and reports a balance of [registered_account.account_balance] cr."
@@ -195,6 +195,7 @@
 	var/rank = null			//actual job
 	var/access_txt // mapping aid
 	var/bank_support = ID_FREE_BANK_ACCOUNT
+	var/mining_support = TRUE // BLUEMOON EDIT
 	var/datum/bank_account/registered_account
 	var/obj/machinery/paystand/my_store
 	var/uses_overlays = TRUE
@@ -399,7 +400,7 @@
 
 /obj/item/card/id/examine(mob/user)
 	. = ..()
-	if(mining_points)
+	if(mining_support && mining_points)
 		. += "There's [mining_points] mining equipment redemption point\s loaded onto this card and [mining_points_total] were earned in total."
 	if(!bank_support || (bank_support == ID_LOCKED_BANK_ACCOUNT && !registered_account))
 		. += "<span class='info'>This ID has no banking support whatsover, must be an older model...</span>"

@@ -136,15 +136,18 @@
 	if(ishuman(user) || iscyborg(user))
 		H = user
 		C = H.get_idcard(TRUE)
-		if(C)
+		if(C) // BLUEMOON EDIT START
 			.["user"] = list()
-			.["user"]["points"] = C.mining_points
+			if (C.mining_support)
+				.["user"]["points"] = C.mining_points
+			else 
+				.["user"]["points"] = "Unable to process"
 			if(C.registered_account)
 				.["user"]["name"] = C.registered_account.account_holder
 				if(C.registered_account.account_job)
 					.["user"]["job"] = C.registered_account.account_job.title
 				else
-					.["user"]["job"] = "No Job"
+					.["user"]["job"] = "No Job" // BLUEMOON EDIT END
 
 /obj/machinery/mineral/equipment_vendor/ui_act(action, params)
 	if(..())
@@ -158,6 +161,10 @@
 				to_chat(usr, "<span class='alert'>Error: An ID is required!</span>")
 				flick(icon_deny, src)
 				return
+			if (!I.mining_support) // BLUEMOON EDIT START
+				to_chat(usr, "<span class='alert'>Error: Unable to process!</span>")
+				flick(icon_deny, src)
+				return // BLUEMOON EDIT END
 			var/datum/data/mining_equipment/prize = locate(params["ref"]) in prize_list
 			if(!prize || !(prize in prize_list))
 				to_chat(usr, "<span class='alert'>Error: Invalid choice!</span>")
@@ -337,7 +344,7 @@
 	points = 50
 
 /obj/item/card/mining_point_card/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/card/id))
+	if(istype(I, /obj/item/card/id) && I.mining_support) // BLUEMOON EDIT 
 		var/obj/item/card/id/id = I
 		to_chat(user, span_info("You swipe [id] on [src] and start the transfer process."))
 		var/choice = alert(user, "Do you want to transfer points to or from the point card's storage?", "Mining Points Transfer", "From Point Card/Storage", "To Point Card/Storage", "Cancel")
@@ -356,15 +363,6 @@
 					id.mining_points += amount
 					points -= amount
 					to_chat(user, span_info("You transfer [amount] points to [id] from [src]."))
-	/*
-		if(points)
-			var/obj/item/card/id/C = I
-			C.mining_points += points
-			to_chat(user, "<span class='info'>You transfer [points] points to [C].</span>")
-			points = 0
-		else
-			to_chat(user, "<span class='info'>There's no points left on [src].</span>")
-	*/
 	..()
 
 /obj/item/card/mining_point_card/examine(mob/user)
