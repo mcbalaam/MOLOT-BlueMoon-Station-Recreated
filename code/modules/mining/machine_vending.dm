@@ -344,8 +344,10 @@
 	points = 50
 
 /obj/item/card/mining_point_card/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/card/id) && I.mining_support) // BLUEMOON EDIT 
+	if(istype(I, /obj/item/card/id)) 
 		var/obj/item/card/id/id = I
+		if (!id.mining_support) // BLUEMOON EDIT 
+			return
 		to_chat(user, span_info("You swipe [id] on [src] and start the transfer process."))
 		var/choice = alert(user, "Do you want to transfer points to or from the point card's storage?", "Mining Points Transfer", "From Point Card/Storage", "To Point Card/Storage", "Cancel")
 		if(choice != "Cancel")
