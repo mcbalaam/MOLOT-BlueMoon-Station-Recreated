@@ -65206,7 +65206,7 @@
 "mdv" = (
 /obj/machinery/atmospherics/components/trinary/filter{
 	dir = 1;
-	filter_type = list(/datum/gas/pluonium)
+	filter_type = list()
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
