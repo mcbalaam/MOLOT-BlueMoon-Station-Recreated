@@ -105958,11 +105958,11 @@
 /area/hallway/primary/starboard)
 "tJt" = (
 /obj/effect/turf_decal/tile{
-	color = #d9d9d9
+	color = "#d9d9d9"
 	},
 /obj/effect/turf_decal/tile{
 	dir = 1;
-	color = #d9d9d9
+	color = "#d9d9d9"
 	},
 /turf/open/floor/iron/edge{
 	dir = 8
@@ -120573,7 +120573,7 @@
 "wvV" = (
 /obj/effect/turf_decal/tile{
 	dir = 1;
-	color = #d9d9d9
+	color = "#d9d9d9"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -122133,11 +122133,11 @@
 /area/science/mixing)
 "wLA" = (
 /obj/effect/turf_decal/tile{
-	color = #d9d9d9
+	color = "#d9d9d9"
 	},
 /obj/effect/turf_decal/tile{
 	dir = 1;
-	color = #d9d9d9
+	color = "#d9d9d9"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/edge{
