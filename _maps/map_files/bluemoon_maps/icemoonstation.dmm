@@ -8386,7 +8386,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/status_display/shuttle{
-	shuttle_id = "snow_taxi";
+	shuttle_id = "snow taxi";
 	name = "taxi shuttle display";
 	pixel_y = 32
 	},
@@ -29623,7 +29623,7 @@
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/status_display/shuttle{
-	shuttle_id = "snow_taxi";
+	shuttle_id = "snow taxi";
 	name = "taxi shuttle display";
 	pixel_y = -32
 	},
@@ -59371,7 +59371,7 @@
 	dir = 1
 	},
 /obj/machinery/status_display/shuttle{
-	shuttle_id = "snow_taxi";
+	shuttle_id = "snow taxi";
 	name = "taxi shuttle display";
 	pixel_y = 32
 	},
@@ -72729,18 +72729,6 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/command/bridge)
-"nxm" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/docking_port/stationary{
-	dwidth = 3;
-	height = 15;
-	id = "arrivals_stationary";
-	name = "arrivals";
-	roundstart_template = /datum/map_template/shuttle/arrival/snaxi;
-	width = 7
-	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
 "nxo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -94649,7 +94637,7 @@
 /area/maintenance/disposal)
 "rDQ" = (
 /obj/machinery/status_display/shuttle{
-	shuttle_id = "snow_taxi";
+	shuttle_id = "snow taxi";
 	name = "taxi shuttle display";
 	pixel_y = -32
 	},
@@ -116714,17 +116702,6 @@
 	},
 /turf/open/floor/wood/wood_large,
 /area/command/blueshieldoffice)
-"vKx" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 12;
-	height = 18;
-	shuttle_id = "emergency_home";
-	name = "BoxStation emergency evac bay";
-	width = 32
-	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
 "vKG" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -289762,7 +289739,7 @@ uya
 uya
 uya
 uya
-nxm
+ufR
 wFj
 uya
 xzn
@@ -298228,7 +298205,7 @@ uya
 uya
 uya
 uya
-vKx
+uya
 uya
 uya
 uya
