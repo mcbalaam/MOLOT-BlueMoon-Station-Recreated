@@ -57879,7 +57879,6 @@
 	dir = 2;
 	dwidth = 2;
 	height = 13;
-	id = "ferry_home";
 	name = "port bay 2";
 	width = 5
 	},
