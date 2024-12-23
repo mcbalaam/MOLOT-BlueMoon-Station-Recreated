@@ -1624,13 +1624,13 @@
 	dir = 8
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
-/obj/machinery/door/airlock/hatch{
-	name = "Medical"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "medbay access"
+	},
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/main)
 "apX" = (
@@ -2533,9 +2533,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Bar"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4;
 	level = 1
@@ -2545,6 +2542,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "bar access"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
 "ayu" = (
@@ -4910,13 +4910,11 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/aft)
 "aWb" = (
-/obj/machinery/door/airlock/mining/glass{
-	name = "Warehouse Office"
-	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/outsidestorage)
 "aWc" = (
@@ -5500,13 +5498,11 @@
 /area/maintenance/department/science)
 "baN" = (
 /obj/structure/fans/tiny,
-/obj/machinery/door/airlock/hatch{
-	name = "Xenobiology Kill Chamber"
-	},
 /obj/machinery/door/poddoor/preopen{
 	id = "glacier_xenokill"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/plating,
 /area/ruin/icemoon/unpowered/glacier/xenobio)
 "baV" = (
@@ -6852,9 +6848,6 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/blue,
-/obj/machinery/door/airlock/hatch{
-	name = "Virology"
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -6867,6 +6860,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "virology access"
+	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/virology)
 "bnh" = (
@@ -10713,15 +10709,15 @@
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 4
 	},
-/obj/effect/turf_decal/siding/dark{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/neutral/diagonal_centre,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2
+	},
+/obj/effect/turf_decal/siding/dark{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
@@ -14824,13 +14820,13 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/white,
-/obj/machinery/door/airlock/hatch{
-	name = "Private Quarters"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "private room"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/dormitories)
 "cKm" = (
@@ -21493,11 +21489,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
-	dir = 4;
-	level = 1
-	},
 /obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/binary/pump/off/scrubbers/visible/layer3{
 	dir = 8
 	},
 /turf/open/floor/iron/dark/side{
@@ -24435,12 +24430,14 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1
 	},
 /obj/effect/spawner/lootdrop/cig_packs,
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
 "exa" = (
@@ -27914,10 +27911,12 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/medbay)
@@ -28690,9 +28689,8 @@
 /area/science)
 "fnq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
-	dir = 1;
-	level = 1
+/obj/machinery/atmospherics/components/binary/pump/off/scrubbers/visible/layer3{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ruin/icemoon/unpowered/glacier/engineering)
@@ -29450,7 +29448,8 @@
 	dir = 5
 	},
 /obj/structure/railing{
-	dir = 1
+	dir = 1;
+	layer = 4.8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
@@ -30186,6 +30185,10 @@
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet/directional/west{
+	pixel_x = -29;
+	pixel_y = 32
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
@@ -33180,11 +33183,11 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Robotics Lab"
-	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "robotics access"
+	},
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/robo)
 "gdV" = (
@@ -37895,9 +37898,6 @@
 /area/command/teleporter)
 "gYR" = (
 /obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/siding/dark{
-	dir = 1
-	},
 /obj/effect/turf_decal/trimline/neutral/filled/warning{
 	dir = 1
 	},
@@ -37908,6 +37908,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/effect/turf_decal/siding/dark{
+	dir = 1
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -39242,7 +39245,6 @@
 /area/maintenance/department/science)
 "hnu" = (
 /obj/effect/turf_decal/siding/dark,
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/telecomms)
 "hnw" = (
@@ -46271,6 +46273,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/bridge)
 "iED" = (
@@ -47326,7 +47329,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -47334,6 +47336,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/dark,
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
+	},
 /turf/open/floor/iron/dark/side,
 /area/ruin/icemoon/unpowered/glacier/main)
 "iNf" = (
@@ -49001,10 +49006,12 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/medbay)
@@ -50049,7 +50056,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 5
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -50057,6 +50063,9 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/dark/corner{
 	dir = 8
@@ -52457,6 +52466,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/main)
 "jKh" = (
@@ -52756,7 +52768,9 @@
 /area/maintenance/aft/secondary)
 "jMs" = (
 /obj/effect/turf_decal/bot,
-/obj/machinery/vending/kink,
+/obj/machinery/vending/kink{
+	onstation = 0
+	},
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/dormitories)
 "jMK" = (
@@ -54704,15 +54718,13 @@
 /area/maintenance/aft/secondary)
 "kdZ" = (
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
-/obj/machinery/door/airlock/hatch{
-	name = "Engineering"
-	},
 /obj/effect/turf_decal/trimline/dark_red{
 	color = "#DE3A3A"
 	},
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/nuclear)
 "keA" = (
@@ -56323,9 +56335,6 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/purple,
-/obj/machinery/door/airlock/hatch{
-	name = "Research Lab"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 2;
 	level = 1
@@ -56338,6 +56347,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "robotics access"
+	},
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/robo)
 "kuU" = (
@@ -57073,9 +57085,6 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/blue,
-/obj/machinery/door/airlock/hatch{
-	name = "Surgery"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -57088,6 +57097,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "surgery access"
+	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/medbay)
 "kBr" = (
@@ -59031,9 +59043,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 8
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/carpet/blackred,
 /area/ruin/icemoon/unpowered/glacier/dormitories)
@@ -59308,6 +59322,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/airlock/multi_tile/metal,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/main)
 "kYV" = (
@@ -61632,7 +61649,6 @@
 	dir = 1
 	},
 /obj/structure/table/glass,
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1
@@ -61640,6 +61656,9 @@
 /obj/item/mmi/posibrain/syndie{
 	pixel_y = 4;
 	pixel_x = 0
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/dark/side,
 /area/ruin/icemoon/unpowered/glacier/xenobio)
@@ -63146,9 +63165,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Kitchen Backroom"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4;
 	level = 1
@@ -63161,6 +63177,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "cafeteria maint access"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafemaint)
 "lGj" = (
@@ -66280,14 +66299,14 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Freezer"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "cafeteria maint access"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafemaint)
 "mlx" = (
@@ -68225,13 +68244,15 @@
 	dir = 4;
 	level = 1
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister,
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/dark/side,
 /area/ruin/icemoon/unpowered/glacier/engineering)
@@ -68471,7 +68492,6 @@
 /turf/open/floor/iron/dark/textured,
 /area/science/mixing)
 "mGN" = (
-/obj/machinery/door/airlock/hatch,
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -68481,6 +68501,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/turf_decal/trimline/red,
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/outsidestorage)
 "mGQ" = (
@@ -68782,12 +68803,12 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Engineering"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "engineering storage"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/engineering)
 "mJg" = (
@@ -69123,9 +69144,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Xenobiology Lab"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
@@ -69137,6 +69155,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "xenobiology access"
+	},
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/lab)
 "mMa" = (
@@ -70930,12 +70951,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 0
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -71296,9 +71319,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Kitchen Backroom"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 2;
 	level = 1
@@ -71311,6 +71331,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "cafeteria maint access"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafemaint)
 "ngE" = (
@@ -76233,8 +76256,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
 	},
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/camera/xray{
+	c_tag = "Xenobio West";
+	dir = 5;
+	network = list("fsci")
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 4
@@ -78007,11 +78032,9 @@
 /turf/open/floor/engine/co2,
 /area/engineering/atmos/upper)
 "otS" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Laundry"
-	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/plating,
 /area/ruin/icemoon/unpowered/glacier/dormitories)
 "otV" = (
@@ -79127,6 +79150,11 @@
 	dir = 6
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/machinery/camera/xray{
+	c_tag = "Xenobio West";
+	dir = 1;
+	network = list("fsci")
+	},
 /turf/open/floor/iron/dark/corner{
 	dir = 1
 	},
@@ -79489,11 +79517,13 @@
 	dir = 4;
 	color = "#ffc986"
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
 /obj/machinery/firealarm/directional/west,
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
+	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/chemistry)
 "oJh" = (
@@ -81777,9 +81807,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Research Lab"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4;
 	level = 1
@@ -81795,6 +81822,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "R&D lab access"
+	},
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/lab)
 "peU" = (
@@ -83419,9 +83449,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Hydroponics"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 2;
 	level = 1
@@ -83434,6 +83461,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "garden access"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
 "pvG" = (
@@ -89721,7 +89751,6 @@
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/north,
-/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/dark/corner,
 /area/ruin/icemoon/unpowered/glacier/lab)
 "qEc" = (
@@ -90640,9 +90669,11 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 5
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/dark/corner{
 	dir = 8
@@ -90958,7 +90989,10 @@
 /area/maintenance/port/fore)
 "qPW" = (
 /obj/structure/flora/rock/jungle,
-/obj/structure/flora/junglebush/large,
+/obj/structure/flora/junglebush/large{
+	pixel_x = -16;
+	pixel_y = 0
+	},
 /turf/open/floor/plating/dirt/dark/jungle,
 /area/ruin/icemoon/unpowered/glacier/main)
 "qQa" = (
@@ -93861,7 +93895,9 @@
 /obj/effect/turf_decal/delivery/white{
 	color = "#b40000"
 	},
-/obj/machinery/atmospherics/pipe/simple/multiz,
+/obj/machinery/atmospherics/pipe/simple/multiz/scrubbers/visible/layer3{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/engineering/atmos/aftair)
 "rrL" = (
@@ -94503,12 +94539,7 @@
 /obj/structure/flora/rock/jungle{
 	icon_state = "busha1"
 	},
-/obj/structure/flora/junglebush/large{
-	pixel_y = 3;
-	pixel_x = -18;
-	icon_state = "bush2";
-	layer = 4.9
-	},
+/obj/structure/flora/biolumi/mine,
 /turf/open/floor/plating/dirt/dark/jungle,
 /area/ruin/icemoon/unpowered/glacier/main)
 "ryO" = (
@@ -95218,6 +95249,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/airlock/multi_tile/metal,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/bridge)
 "rFW" = (
@@ -95435,6 +95467,11 @@
 /obj/effect/turf_decal/trimline/purple/filled/corner,
 /obj/machinery/atmospherics/pipe/simple/purple/hidden,
 /obj/machinery/light_switch/directional/east,
+/obj/machinery/camera/xray{
+	c_tag = "Xenobio East";
+	dir = 9;
+	network = list("fsci")
+	},
 /turf/open/floor/iron/dark/side{
 	dir = 9
 	},
@@ -96800,6 +96837,9 @@
 /obj/machinery/light{
 	dir = 8;
 	layer = 4.8
+	},
+/obj/machinery/atmospherics/pipe/simple/multiz/supply/visible/layer1{
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/engineering/atmos/aftair)
@@ -98992,8 +99032,8 @@
 /obj/machinery/atmospherics/pipe/simple/general/hidden/layer1{
 	dir = 10
 	},
-/obj/machinery/atmospherics/components/binary/relief_valve/layer3{
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
+	dir = 4
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 9
@@ -100147,11 +100187,11 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/blue,
-/obj/machinery/door/airlock/hatch{
-	name = "Medical Reception"
-	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "medbay reception access"
+	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/medbay)
 "sAU" = (
@@ -102874,14 +102914,14 @@
 /obj/effect/turf_decal/trimline/white,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/door/airlock/hatch{
-	name = "Private Quarters"
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "private room"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/dormitories)
 "tar" = (
@@ -104295,11 +104335,11 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/red,
-/obj/machinery/door/airlock/hatch{
-	name = "Telecommunications"
-	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "telecomms access"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/telecomms)
 "tpS" = (
@@ -105162,9 +105202,6 @@
 	name = "storage marker"
 	},
 /obj/effect/turf_decal/trimline/white,
-/obj/machinery/door/airlock/hatch{
-	name = "Bathroom"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
 	},
@@ -105173,6 +105210,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "private room"
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/dormitories)
 "txP" = (
@@ -105340,10 +105380,10 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/door/airlock/hatch{
-	name = "Medical"
-	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "medbay access"
+	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/medbay)
 "tzH" = (
@@ -119330,22 +119370,8 @@
 	},
 /area/hallway/primary/aft)
 "wgA" = (
-/obj/effect/turf_decal/bot_white{
-	name = "storage marker"
-	},
-/obj/effect/turf_decal/trimline/white,
-/obj/machinery/door/airlock/hatch{
-	name = "Private Quarters"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
-/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
-/area/ruin/icemoon/unpowered/glacier/dormitories)
+/area/ruin/icemoon/unpowered/glacier/telecomms)
 "wgB" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -123908,9 +123934,11 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
-/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/auto_name/north{
+	req_access = list()
 	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/virology)
@@ -123957,10 +123985,7 @@
 /area/security/brig)
 "wYp" = (
 /obj/structure/flora/grass/jungle,
-/obj/structure/flora/junglebush/large{
-	icon_state = "bush2";
-	pixel_y = 3
-	},
+/obj/structure/flora/junglebush/large,
 /turf/open/floor/plating/dirt/dark/jungle,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
 "wYC" = (
@@ -125529,13 +125554,13 @@
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 6
 	},
-/obj/effect/turf_decal/siding/dark{
-	dir = 6
-	},
 /obj/effect/turf_decal/tile/neutral/diagonal_centre,
 /obj/machinery/light_switch/directional/east,
 /obj/structure/disposalpipe/segment{
 	dir = 9
+	},
+/obj/effect/turf_decal/siding/dark{
+	dir = 6
 	},
 /turf/open/floor/iron/dark,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
@@ -126474,9 +126499,6 @@
 /obj/effect/turf_decal/bot_white{
 	name = "storage marker"
 	},
-/obj/machinery/door/airlock/hatch{
-	name = "Chemistry"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -126489,6 +126511,9 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch/syndicate{
+	name = "chemistry access"
+	},
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/chemistry)
 "xyV" = (
@@ -129895,15 +129920,15 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 6;
 	level = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 5
+	},
+/obj/machinery/atmospherics/components/binary/pump/off/supply/visible/layer1{
+	dir = 4
 	},
 /turf/open/floor/iron/dark/side{
 	dir = 10
@@ -138572,7 +138597,7 @@ kwx
 jel
 jlh
 jDL
-wgA
+taq
 rEY
 byd
 bGj
@@ -139600,7 +139625,7 @@ bIM
 cKj
 hAI
 gWi
-wgA
+taq
 rEY
 byd
 ctd
@@ -143683,7 +143708,7 @@ rBQ
 tCC
 udB
 rER
-knn
+wgA
 lOA
 fcl
 iBC

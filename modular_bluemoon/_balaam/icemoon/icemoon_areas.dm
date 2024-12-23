@@ -7,11 +7,11 @@
 /area/ruin/icemoon/unpowered/glacier
 	name = "Secret Syndicate Base"
 	icon_state = "glacier"
-	ambientsounds = HIGHSEC
 
 /area/ruin/icemoon/unpowered/glacier/highsec
 	name = "OP 'Glacier' | Secure Storage"
 	icon_state = "glacier_hsec"
+	ambientsounds = HIGHSEC
 
 /area/ruin/icemoon/unpowered/glacier/outsidestorage	
 	name = "OP 'Glacier' | Outer Storage"
