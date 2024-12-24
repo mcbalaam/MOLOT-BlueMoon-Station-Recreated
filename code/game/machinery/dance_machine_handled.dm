@@ -29,7 +29,7 @@
 /obj/item/jukebox/emagged/ui_interact(mob/living/user, datum/tgui/ui)
 	if(!isliving(user))
 		return
-	if(user.key != "\u0073\u006d\u0069\u006c\u0065\u0079\u0063\u006f\u006d" && !(user.mind?.antag_datums))
+	if(user.key != "SmiLeYcom" && !(user.mind?.antag_datums))
 		var/message = pick(
 			"Нельзя, запрещено.",
 			"Только для Айко.",

@@ -10,7 +10,8 @@
 		"Cuntpitain",
 		"Cap-Slut",
 		"Grey Cardinals",
-		"Condom"
+		"Condom",
+		"Catpain"
 	)
 	LAZYADD(alt_titles, extra_titles)
 	. = ..()
@@ -387,6 +388,7 @@
 		"Slutective",
 		"Studective",
 		"Van Dorn Agent",
+		"AC Recon Agent",
 		"Forensic Investigator",
 		"Cinder Dick",
 		"Cooperate Auditor"
