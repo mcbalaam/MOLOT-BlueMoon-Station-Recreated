@@ -1,4 +1,3 @@
-/* // BLUEMOON EDIT:START IPINTEL FROM TG
 /datum/ipintel
 	var/ip
 	var/intel = 0
@@ -135,4 +134,3 @@
 /proc/log_ipintel(text)
 	log_game("IPINTEL: [text]")
 	debug_admins("IPINTEL: [text]")
-*/ // BLUEMOON EDIT:END IPINTEL FROM TG
