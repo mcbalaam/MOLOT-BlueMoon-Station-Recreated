@@ -8574,11 +8574,6 @@
 	pixel_x = -26;
 	pixel_y = 0
 	},
-/obj/machinery/status_display/shuttle{
-	shuttle_id = "snow shuttle";
-	name = "taxi shuttle display";
-	pixel_y = 32
-	},
 /turf/open/floor/iron/dark/side{
 	dir = 9
 	},
@@ -30146,11 +30141,6 @@
 "fxo" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/neutral,
-/obj/machinery/status_display/shuttle{
-	shuttle_id = "snow shuttle";
-	name = "taxi shuttle display";
-	pixel_y = -32
-	},
 /turf/open/floor/iron/dark/side{
 	dir = 2
 	},
@@ -60460,11 +60450,6 @@
 "lbc" = (
 /obj/structure/railing{
 	dir = 1
-	},
-/obj/machinery/status_display/shuttle{
-	shuttle_id = "snow shuttle";
-	name = "taxi shuttle display";
-	pixel_y = 32
 	},
 /turf/open/openspace,
 /area/hallway/primary/aft)
@@ -96404,11 +96389,6 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "rDQ" = (
-/obj/machinery/status_display/shuttle{
-	shuttle_id = "snow shuttle";
-	name = "taxi shuttle display";
-	pixel_y = -32
-	},
 /turf/open/openspace,
 /area/hallway/secondary/exit/departure_lounge)
 "rEg" = (
