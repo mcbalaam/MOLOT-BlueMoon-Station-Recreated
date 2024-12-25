@@ -19641,7 +19641,7 @@
 	dwidth = 3;
 	height = 5;
 	name = "South Taxi Port";
-	roundstart_template = /datum/map_template/shuttle/snow_taxi;
+	roundstart_template = /datum/map_template/shuttle/ice_taxi;
 	width = 7;
 	shuttle_id = "snow shuttle"
 	},
