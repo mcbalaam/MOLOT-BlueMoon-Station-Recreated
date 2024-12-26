@@ -194,7 +194,7 @@
 	suffix = "taxi"
 
 /datum/map_template/shuttle/ice_taxi
-	port_id = "snow"
+	port_id = "ice"
 	can_be_bought = FALSE
 	prefix = "_maps/map_files/bluemoon_maps/"
 	suffix = "taxi"
