@@ -2,7 +2,7 @@
 /obj/machinery/atmospherics/pipe/simple/multiz
 	name = "multi deck pipe adapter"
 	desc = "An adapter which allows pipes to connect to other pipenets on different decks."
-	icon_state = "adapter-3"
+	icon_state = "adapter-2"
 	icon = 'icons/obj/multiz.dmi'
 
 	dir = SOUTH
