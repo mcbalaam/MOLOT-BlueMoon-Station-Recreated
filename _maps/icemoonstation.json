@@ -17,8 +17,7 @@
 			"Gravity": true,
 			"Baseturf": "/turf/open/lava/plasma/ice_moon",
 			"Linkage": "null",
-			"Mining": true,
-			"Station": true
+			"Mining": true
 		},
 		{
 			"Up": 1,
@@ -26,8 +25,7 @@
 			"Gravity": true,
 			"Baseturf": "/turf/open/openspace/icemoon",
 			"Linkage": "null",
-			"Mining": true,
-			"Station": true
+			"Mining": true
 		},
 		{
 			"Down": -1,
@@ -35,8 +33,7 @@
 			"Baseturf": "/turf/open/openspace",
 			"Weather_Snowstorm": true,
 			"Linkage": "null",
-			"Mining": true,
-			"Station": true
+			"Mining": true
 		}
 	],
 	"minetype": "none"
