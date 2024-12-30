@@ -8,7 +8,7 @@
 /turf/open/floor/catwalk_floor
 	icon = 'icons/turf/floors/catwalk_plating.dmi'
 	icon_state = "maint_below"
-	floor_tile = /obj/item/stack/tile/catwalk
+	floor_tile = /obj/item/stack/tile/catwalk_tile
 	name = "catwalk floor"
 	desc = "Flooring that shows its contents underneath. Engineers love it!"
 	baseturfs = /turf/open/floor/plating
