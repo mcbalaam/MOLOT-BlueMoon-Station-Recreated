@@ -321,13 +321,13 @@ SUBSYSTEM_DEF(vote)
 			text += "\n<b>[choices[i]]:</b> [display_votes & SHOW_RESULTS ? votes : "???"]" //CIT CHANGE - adds obfuscated votes
 		if(mode != "custom")
 			if(winners.len > 1 && display_votes & SHOW_WINNER) //CIT CHANGE - adds obfuscated votes
-				text = "\n<b>Vote Tied Between:</b>"
+				text = "\n<b>Результаты голосования: ничья между...</b>"
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\n<b>Vote Result: [display_votes & SHOW_WINNER ? . : "???"]</b>" //CIT CHANGE - adds obfuscated votes
+			text += "\n<b>Результаты голосования: [display_votes & SHOW_WINNER ? . : "???"]</b>" //CIT CHANGE - adds obfuscated votes
 		if(display_votes & SHOW_ABSTENTION)
-			text += "\n<b>Did not vote:</b> [GLOB.clients.len-voted.len]"
+			text += "\n<b>Воздержались:</b> [GLOB.clients.len-voted.len]"
 	else if(vote_system == SCORE_VOTING)
 		for(var/score_name in scores)
 			var/score = scores[score_name]
@@ -338,10 +338,10 @@ SUBSYSTEM_DEF(vote)
 			text = "\n<b>[score_name]:</b> [display_votes & SHOW_RESULTS ? score : "???"]"
 			. = 1
 	else
-		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
+		text += "<b>\n Голосование не удалось – голосов не было!</b>"
 	log_vote(text)
 	remove_action_buttons()
-	to_chat(world, "\n<font color='purple'>[text]</font>")
+	to_chat(world, vote_block(text))
 	switch(vote_system)
 		if(APPROVAL_VOTING,PLURALITY_VOTING)
 			for(var/i=1,i<=choices.len,i++)
@@ -598,14 +598,29 @@ SUBSYSTEM_DEF(vote)
 		mode = vote_type
 		initiator = initiator_key ? initiator_key : "the Server" // austation -- Crew autotransfer vote
 		started_time = world.time
-		var/text = "[capitalize(mode)] vote started by [initiator]."
+		// BLUEMOON EDIT START - реструктурирование
+		var/text = ""
+		var/static/list/votemodes = list(
+			"restart" = "за рестарт сервера",
+			"map" = "за выбор карты",
+			"gamemode" = "за выбор режима игры",
+			"transfer" = "за окончание раунда",
+			"roundtype" = "за выбор режима игры",
+			"custom" = "" // за упокой
+		)
+		var/mode_ru = votemodes[mode]
+
+		text += capitalize("[mode == "custom" ? "кастомное " : ""]голосование [mode != "custom" ? "[mode_ru] " : ""]начато [initiator == "server" ? "автоматически" : initiator].\n")
 		if(mode == "custom")
-			text += "\n[question]"
+			text += "\n[question]\n"
 		log_vote(text)
 		var/vp = vote_time
 		if(vp == -1)
 			vp = CONFIG_GET(number/vote_period)
-		to_chat(world, "\n<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='?src=[REF(src)]'>here</a> to place your votes.\nYou have [DisplayTimeText(vp)] to vote.</font>")
+		text += "\nНажмите <b>'Vote'</b> во вкладке OOC или нажмите <a href='?src=[REF(src)]'>сюда</a> чтобы проголосовать."
+		text += "\nДо окончания голосования – [DisplayTimeText(vp)]."
+		to_chat(world, vote_block(text))
+		// BLUEMOON EDIT END
 		end_time = started_time+vp
 		// generate statclick list
 		choice_statclicks = list()
@@ -675,7 +690,7 @@ SUBSYSTEM_DEF(vote)
 
 		if(mode == "roundtype")
 			// BLUEMOON ADD START
-			. += "<br>Если побеждает [ROUNDTYPE_DYNAMIC], то берётся одна из вариаций динамика."
+			. += "<br>Если побеждает [ROUNDTYPE_DYNAMIC], то берётся одна из вариаций динамика."  // df
 
 			. += "<br><font size=1><small><b>[ROUNDTYPE_DYNAMIC_TEAMBASED]:</b></font></small>"
 			. += "<br><font size=1><small>55-100 угрозы, только командные и особые одиночные антагонисты, необходим минимум [ROUNDTYPE_PLAYERCOUNT_DYNAMIC_HIGHPOP_MIN] игрок;</font></small>"

@@ -1225,3 +1225,26 @@ li {
 	margin-top: 5px;
 	margin-bottom: 30px;
 }
+
+.votepanel {
+	color: purple;
+	border: 1px solid purple;
+	border-left: 5px solid purple;
+	background: rgba(0, 0, 0, 0.2);
+	margin: 7px 4px;
+	padding: 8px 12px;
+	max-width: 550px;
+}
+
+.roundstart {
+	margin: 7px 4px;
+	padding: 5px 12px;
+	width: 100%;
+	max-width: 550px;
+	background-image: linear-gradient(45deg, #88a2c9 25%, #8284af 25%, #8284af 50%, #88a2c9 50%, #88a2c9 75%, #8284af 75%, #8284af 100%);
+	background-size: 28.28px 28.28px;
+	color: black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
