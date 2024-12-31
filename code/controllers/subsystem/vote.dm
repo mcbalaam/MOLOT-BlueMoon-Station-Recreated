@@ -41,6 +41,17 @@ SUBSYSTEM_DEF(vote)
 
 	var/list/stored_modetier_results = list() // The aggregated tier list of the modes available in secret.
 
+	// BLUEMOON ADD START - перевод режимов
+	var/static/list/ru_votemodes = list(
+	"restart" = "за рестарт сервера",
+	"map" = "за выбор карты",
+	"gamemode" = "за выбор режима игры",
+	"transfer" = "за окончание раунда",
+	"roundtype" = "за выбор режима игры",
+	"custom" = "" // за упокой
+	)
+	// BLUEMOON ADD END
+
 /datum/controller/subsystem/vote/fire()	//called by master_controller
 	if(mode)
 //BLUEMOON ADD START
@@ -291,10 +302,8 @@ SUBSYSTEM_DEF(vote)
 	var/vote_title_text
 	var/text
 	if(question)
-		text += "<b>[question]</b>"
 		vote_title_text = "[question]"
 	else
-		text += "<b>[capitalize(mode)] Vote</b>"
 		vote_title_text = "[capitalize(mode)] Vote"
 	if(vote_system == SCHULZE_VOTING)
 		calculate_condorcet_votes(vote_title_text)
@@ -304,6 +313,9 @@ SUBSYSTEM_DEF(vote)
 		calculate_highest_median(vote_title_text) // nothing uses this at the moment
 	var/list/winners = vote_system == INSTANT_RUNOFF_VOTING ? get_runoff_results() : get_result()
 	var/was_roundtype_vote = mode == "roundtype" || mode == "dynamic"
+	text += "Результаты [mode == "custom" ? "кастомного " : ""]голосования[mode != "custom" ? " [ru_votemodes[mode]]" : ""]: \n" // BLUEMOON EDIT
+	if(question)
+		text += "\n<b>[question]</b>\n"
 	if(winners.len > 0)
 		if(was_roundtype_vote)
 			stored_gamemode_votes = list()
@@ -312,22 +324,35 @@ SUBSYSTEM_DEF(vote)
 				text += "\nIt should be noted that this is not a raw tally of votes (impossible in ranked choice) but the score determined by the schulze method of voting, so the numbers will look weird!"
 			if(vote_system == HIGHEST_MEDIAN_VOTING)
 				text += "\nThis is the highest median score plus the tiebreaker!"
-		for(var/i=1,i<=choices.len,i++)
-			var/votes = choices[choices[i]]
-			if(!votes)
-				votes = 0
+		// BLUEMOON EDIT START - отрисовка результатов голосования 
+		var/total_votes = 0
+		var/votes_left = "<div class='left-column'>"
+		var/votes_right = "<div class='right-column' id='results-container'>"
+		for(var/i = 1, i <= choices.len, i++)
+			var/votes_amount = choices[choices[i]]
+			if(!votes_amount)
+				votes_amount = 0
 			if(was_roundtype_vote)
-				stored_gamemode_votes[choices[i]] = votes
-			text += "\n<b>[choices[i]]:</b> [display_votes & SHOW_RESULTS ? votes : "???"]" //CIT CHANGE - adds obfuscated votes
+				stored_gamemode_votes[choices[i]] = votes_amount
+			total_votes += votes_amount
+			votes_left += "<div class='vote_variant'>[choices[i]]: <b>[display_votes & SHOW_RESULTS ? votes_amount : "???"]</b></div>"
+
+			var/percent = total_votes > 0 ? (votes_amount / total_votes) * 100 : 0
+			votes_right += "<div class='votewrap'><div class='voteresult' style='width: [percent]%;'><span>[percent]%</span></div></div>"
+
+		votes_left += "</div>"
+		votes_right += "</div>"
+		text += "<div class='voteresults'>[votes_left][votes_right]</div>"
+		// BLUEMOON EDIT END 
 		if(mode != "custom")
 			if(winners.len > 1 && display_votes & SHOW_WINNER) //CIT CHANGE - adds obfuscated votes
-				text = "\n<b>Результаты голосования: ничья между...</b>"
+				text = "\n<b>ничья между...</b>"
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\n<b>Результаты голосования: [display_votes & SHOW_WINNER ? . : "???"]</b>" //CIT CHANGE - adds obfuscated votes
+			text += "\nПобедитель голосования: <b>[display_votes & SHOW_WINNER ? . : "???"]</b>\n" //CIT CHANGE - adds obfuscated votes
 		if(display_votes & SHOW_ABSTENTION)
-			text += "\n<b>Воздержались:</b> [GLOB.clients.len-voted.len]"
+			text += "\nВоздержались: <b>[GLOB.clients.len-voted.len]</b>"
 	else if(vote_system == SCORE_VOTING)
 		for(var/score_name in scores)
 			var/score = scores[score_name]
@@ -600,17 +625,8 @@ SUBSYSTEM_DEF(vote)
 		started_time = world.time
 		// BLUEMOON EDIT START - реструктурирование
 		var/text = ""
-		var/static/list/votemodes = list(
-			"restart" = "за рестарт сервера",
-			"map" = "за выбор карты",
-			"gamemode" = "за выбор режима игры",
-			"transfer" = "за окончание раунда",
-			"roundtype" = "за выбор режима игры",
-			"custom" = "" // за упокой
-		)
-		var/mode_ru = votemodes[mode]
 
-		text += capitalize("[mode == "custom" ? "кастомное " : ""]голосование [mode != "custom" ? "[mode_ru] " : ""]начато [initiator == "server" ? "автоматически" : initiator].\n")
+		text += capitalize("[mode == "custom" ? "кастомное " : ""]голосование [mode != "custom" ? "[ru_votemodes[mode]] " : ""]начато [initiator == "server" ? "автоматически" : initiator].\n")
 		if(mode == "custom")
 			text += "\n[question]\n"
 		log_vote(text)

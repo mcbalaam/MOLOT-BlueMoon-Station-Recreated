@@ -280,7 +280,7 @@ SUBSYSTEM_DEF(ticker)
 
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, "<span class='roundstart'><b>Раунд начинается...</b></span>") // BLUEMOON EDIT
+	to_chat(world, "<span class='boldannounce'>Starting game...</span>")
 	var/init_start = world.timeofday
 	if(emergency_swap >= 10)
 		force_gamemode("Extended")	// If everything fails extended does not have hard requirements for starting, could be changed if needed.
