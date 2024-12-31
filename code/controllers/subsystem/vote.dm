@@ -337,9 +337,9 @@ SUBSYSTEM_DEF(vote)
 			total_votes += votes_amount
 			votes_left += "<div class='vote_variant'>[choices[i]]: <b>[display_votes & SHOW_RESULTS ? votes_amount : "???"]</b></div>"
 
-			var/percent = total_votes > 0 ? (votes_amount / total_votes) * 100 : 0
-			votes_right += "<div class='votewrap'><div class='voteresult' style='width: [percent]%;'><span>[percent]%</span></div></div>"
-
+			if (display_votes & SHOW_RESULTS)
+				var/percent = total_votes > 0 ? (votes_amount / total_votes) * 100 : 0
+				votes_right += "<div class='votewrap'><div class='voteresult' style='width: [percent]%;'><span>[percent]%</span></div></div>"
 		votes_left += "</div>"
 		votes_right += "</div>"
 		text += "<div class='voteresults'>[votes_left][votes_right]</div>"
@@ -350,7 +350,7 @@ SUBSYSTEM_DEF(vote)
 				for(var/option in winners)
 					text += "\n\t[option]"
 			. = pick(winners)
-			text += "\nПобедитель голосования: <b>[display_votes & SHOW_WINNER ? . : "???"]</b>\n" //CIT CHANGE - adds obfuscated votes
+			text += "Победитель голосования: <b>[display_votes & SHOW_WINNER ? . : "???"]</b>\n" //CIT CHANGE - adds obfuscated votes
 		if(display_votes & SHOW_ABSTENTION)
 			text += "\nВоздержались: <b>[GLOB.clients.len-voted.len]</b>"
 	else if(vote_system == SCORE_VOTING)
@@ -363,7 +363,7 @@ SUBSYSTEM_DEF(vote)
 			text = "\n<b>[score_name]:</b> [display_votes & SHOW_RESULTS ? score : "???"]"
 			. = 1
 	else
-		text += "<b>\n Голосование не удалось – голосов не было!</b>"
+		text += "<b>\nГолосование не удалось – голосов не было!</b>"
 	log_vote(text)
 	remove_action_buttons()
 	to_chat(world, vote_block(text))
@@ -628,7 +628,7 @@ SUBSYSTEM_DEF(vote)
 
 		text += capitalize("[mode == "custom" ? "кастомное " : ""]голосование [mode != "custom" ? "[ru_votemodes[mode]] " : ""]начато [initiator == "server" ? "автоматически" : initiator].\n")
 		if(mode == "custom")
-			text += "\n[question]\n"
+			text += "\n<b>[question]</b>\n"
 		log_vote(text)
 		var/vp = vote_time
 		if(vp == -1)
