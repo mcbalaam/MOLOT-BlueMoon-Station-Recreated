@@ -1263,16 +1263,19 @@ li {
 	text-align: left;
 	height: 20px;
 	margin-bottom: 5px;
+	border: 1px solid purple;
+	border-radius: 2px;
 }
 
 .voteresult {
-    background-color: #4CAF50;
+    background-color: purple;
     height: 20px;
     padding-left: 5px;
+	border-radius: 2px;
 }
 
 .vote_variant {
-	height: 20px;
+	height: 19px;
 	line-height: 20px;
 	margin-bottom: 5px;
 }

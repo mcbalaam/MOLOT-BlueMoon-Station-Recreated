@@ -339,7 +339,10 @@ SUBSYSTEM_DEF(vote)
 
 			if (display_votes & SHOW_RESULTS)
 				var/percent = total_votes > 0 ? (votes_amount / total_votes) * 100 : 0
-				votes_right += "<div class='votewrap'><div class='voteresult' style='width: [percent]%;'><span>[percent]%</span></div></div>"
+				if (percent > 0)
+					votes_right += "<div class='votewrap'><div class='voteresult' style='width: [percent]%;'><span>[percent]%</span></div></div>"
+				else 
+					votes_right += "<div class='votewrap'><div class='voteresult' style='background-color: rgba(0, 0, 0, 0);'><span>[percent]%</span></div></div>";
 		votes_left += "</div>"
 		votes_right += "</div>"
 		text += "<div class='voteresults'>[votes_left][votes_right]</div>"
