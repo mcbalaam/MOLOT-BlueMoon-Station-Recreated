@@ -336,11 +336,12 @@ SUBSYSTEM_DEF(vote)
 				stored_gamemode_votes[choices[i]] = votes_amount
 			total_votes += votes_amount
 			votes_left += "<div class='vote_variant'>[choices[i]]: <b>[display_votes & SHOW_RESULTS ? votes_amount : "???"]</b></div>"
-
+		for(var/i = 1, i <= choices.len, i++)
 			if (display_votes & SHOW_RESULTS)
-				var/percent = total_votes > 0 ? (votes_amount / total_votes) * 100 : 0
+				var/votes_amount = choices[choices[i]]
+				var/percent = total_votes > 0 ? round((votes_amount / total_votes) * 100) : 0
 				if (percent > 0)
-					votes_right += "<div class='votewrap'><div class='voteresult' style='width: [percent]%;'><span>[percent]%</span></div></div>"
+					votes_right += "<div class='votewrap'><div class='voteresult' style='width: calc([percent]% + 2px);'><span>[percent]%</span></div></div>"
 				else 
 					votes_right += "<div class='votewrap'><div class='voteresult' style='background-color: rgba(0, 0, 0, 0);'><span>[percent]%</span></div></div>";
 		votes_left += "</div>"
@@ -369,6 +370,7 @@ SUBSYSTEM_DEF(vote)
 		text += "<b>\nГолосование не удалось – голосов не было!</b>"
 	log_vote(text)
 	remove_action_buttons()
+	SEND_SOUND(world, sound('sound/misc/notice2.ogg'))
 	to_chat(world, vote_block(text))
 	switch(vote_system)
 		if(APPROVAL_VOTING,PLURALITY_VOTING)
