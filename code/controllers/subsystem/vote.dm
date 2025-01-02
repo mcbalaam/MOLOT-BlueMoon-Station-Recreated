@@ -339,7 +339,7 @@ SUBSYSTEM_DEF(vote)
 		for(var/i = 1, i <= choices.len, i++)
 			if (display_votes & SHOW_RESULTS)
 				var/votes_amount = choices[choices[i]]
-				var/percent = total_votes > 0 ? round((votes_amount / total_votes) * 100) : 0
+				var/percent = total_votes > 0 ? round((votes_amount / total_votes) * 100, 1) : 0
 				if (percent > 0)
 					votes_right += "<div class='votewrap'><div class='voteresult' style='width: calc([percent]% + 2px);'><span>[percent]%</span></div></div>"
 				else 
