@@ -43,6 +43,7 @@
 	Your goal is to cultivate and spread life wherever it will go while waiting for contact from your creators. \
 	Estimated time of last contact: Deployment, 5000 millennia ago."
 	assignedrole = "Lifebringer"
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/seed_vault/Destroy()
 	new/obj/structure/fluff/empty_terrarium(get_turf(src))
@@ -379,6 +380,7 @@
 	important_info = "Вы не антагонист."
 	assignedrole = "Translocated Vet"
 	can_load_appearance = TRUE
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/doctor/alive/lavaland/Destroy()
 	var/obj/structure/fluff/empty_sleeper/S = new(drop_location())
@@ -445,7 +447,6 @@
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
 	antagonist_type = /datum/antagonist/ghost_role/space_hotel
-	category = "special"
 
 /datum/outfit/hotelstaff
 	name = "Hotel Staff"
@@ -1279,6 +1280,7 @@
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
 	antagonist_type = /datum/antagonist/ghost_role/centcom_intern
+	category = "offstation"
 
 /datum/outfit/centcom_nanotrasen
 	name = "Special Ops Nanotrasen Intern"

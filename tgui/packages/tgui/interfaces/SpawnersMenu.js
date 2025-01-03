@@ -17,7 +17,7 @@ export const SpawnerContent = (props, context) => {
   const [tab, setTab] = useSharedState(context, 'tab', 'misc');
   const spawners = data.spawners || [];
   const misc = spawners.filter((spawner) => spawner.category === 'misc');
-  const ds = spawners.filter((spawner) => spawner.category === 'ds');
+  const syndicate = spawners.filter((spawner) => spawner.category === 'syndicate');
   const inteq = spawners.filter((spawner) => spawner.category === 'inteq');
   const midround = spawners.filter((spawner) => spawner.category === 'midround');
 	const special = spawners.filter((spawner) => spawner.category === 'special');
@@ -35,9 +35,9 @@ export const SpawnerContent = (props, context) => {
           </Tabs.Tab>
           <Tabs.Tab
             icon="handshake"
-            selected={tab === 'ds'}
-            onClick={() => setTab('ds')}>
-            Syndicate ({ds.length})
+            selected={tab === 'syndicate'}
+            onClick={() => setTab('syndicate')}>
+            Syndicate ({syndicate.length})
           </Tabs.Tab>
           <Tabs.Tab
             icon="skull-crossbones"
@@ -66,7 +66,7 @@ export const SpawnerContent = (props, context) => {
         </Tabs>
       </Section>
       {tab === 'misc' && <RolelistMisc spawners={misc} />}
-      {tab === 'ds' && <RolelistDS spawners={ds} />}
+      {tab === 'syndicate' && <RolelistSyndicate spawners={syndicate} />}
       {tab === 'inteq' && <RolelistInteq spawners={inteq} />}
       {tab === 'midround' && <RolelistMidround spawners={midround} />}
 			{tab === 'special' && <RolelistSpecial spawners={special} />}
@@ -139,7 +139,7 @@ export const RolelistMisc = ({ spawners, context }) => {
   );
 };
 
-export const RolelistDS = ({ spawners, context }) => {
+export const RolelistSyndicate = ({ spawners, context }) => {
   return (
     <Section>
       {spawners.map((spawner) => (
