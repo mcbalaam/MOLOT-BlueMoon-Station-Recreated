@@ -447,6 +447,7 @@
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
 	antagonist_type = /datum/antagonist/ghost_role/space_hotel
+	category = "offstation"
 
 /datum/outfit/hotelstaff
 	name = "Hotel Staff"
@@ -701,6 +702,7 @@
 	job_description = "Oldstation Crew"
 	assignedrole = "Ancient Crew"
 	can_load_appearance = TRUE
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/oldsec/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
