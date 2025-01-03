@@ -126,6 +126,7 @@
 	assignedrole = "Ash Walker"
 	var/datum/team/ashwalkers/team
 	var/obj/structure/ash_walker_eggshell/eggshell
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/ash_walker/Destroy()
 	eggshell = null
@@ -233,6 +234,7 @@
 	путешествовать по звездам с одним единственным заявлением: \ 'Да, делай что хочешь.'\ Хотя вы связаны с тем, кто вас создал, в вашем обществе принято повторять эти же слова новорожденным \
 	големам, чтобы ни один голем никогда не был вынужден служить снова."
 	important_info = "Вы не антагонист."
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/golem/Initialize(mapload, datum/species/golem/species = null, mob/creator = null)
 	if(species) //spawners list uses object name to register so this goes before ..()
@@ -322,6 +324,7 @@
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
 	antagonist_type = /datum/antagonist/ghost_role/hermit
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/hermit/Initialize(mapload)
 	. = ..()
@@ -442,6 +445,7 @@
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
 	antagonist_type = /datum/antagonist/ghost_role/space_hotel
+	category = "special"
 
 /datum/outfit/hotelstaff
 	name = "Hotel Staff"
@@ -546,6 +550,7 @@
 	outfit = /datum/outfit/syndicate_empty
 	assignedrole = "Space Syndicate"	//I know this is really dumb, but Syndicate operative is nuke ops
 	can_load_appearance = TRUE
+	category = "syndicate"
 
 /obj/effect/mob_spawn/human/solfed
 	name = "Solar Federation Marine"
@@ -557,6 +562,7 @@
 	assignedrole = "Solar Federation Operative"
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
+	category = "offstation"
 
 /obj/effect/mob_spawn/human/solfed/demoman
 	name = "Solar Federation Support"
@@ -774,6 +780,7 @@
 	assignedrole = "Space Pirate"
 	var/rank = "Mate"
 	can_load_appearance = FALSE
+	category = "midround"
 
 /obj/effect/mob_spawn/human/pirate/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
 	. = ..()
@@ -1039,6 +1046,7 @@
 	give_cooler_to_mob_if_synth = TRUE
 
 	antagonist_type = /datum/antagonist/ghost_role/tarkov
+	category = "offstation"
 
 /datum/outfit/tarkoff
 	name = "Default Port Tarkov Outfit"
@@ -1215,6 +1223,7 @@
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
 	antagonist_type = /datum/antagonist/ghost_role/centcom_intern
+	category = "offstation"
 
 /datum/outfit/centcom_syndicate
 	name = "Special Ops Syndicate Intern"
@@ -1324,6 +1333,7 @@
 	computer_area = /area/ruin/space/has_grav/bluemoon/deepspacetwo/service/dorms
 	antagonist_type = /datum/antagonist/ghost_role/ds2
 	make_bank_account = TRUE // BLUEMOON ADD
+	category = "syndicate"
 
 /obj/effect/mob_spawn/human/ds2/prisoner
 	name = "Syndicate Prisoner"
