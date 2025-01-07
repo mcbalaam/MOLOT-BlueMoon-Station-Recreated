@@ -338,12 +338,15 @@ SUBSYSTEM_DEF(vote)
 			votes_left += "<div class='vote_variant'>[choices[i]]: <b>[display_votes & SHOW_RESULTS ? votes_amount : "???"]</b></div>"
 		for(var/i = 1, i <= choices.len, i++)
 			if (display_votes & SHOW_RESULTS)
-				var/votes_amount = choices[choices[i]]
-				var/percent = total_votes > 0 ? round((votes_amount / total_votes) * 100, 1) : 0
-				if (percent > 0)
-					votes_right += "<div class='votewrap'><div class='voteresult' style='width: calc([percent]% + 2px);'><span>[percent]%</span></div></div>"
-				else 
-					votes_right += "<div class='votewrap'><div class='voteresult' style='background-color: rgba(0, 0, 0, 0);'><span>[percent]%</span></div></div>";
+				if (length(choices) == 1)
+					votes_right += "<div class='votewrap'><div class='voteresult' style='width: calc(100% + 2px);'><span>1984%</span></div></div>";
+				else
+					var/votes_amount = choices[choices[i]]
+					var/percent = total_votes > 0 ? round((votes_amount / total_votes) * 100, 1) : 0
+					if (percent > 0)
+						votes_right += "<div class='votewrap'><div class='voteresult' style='width: calc([percent]% + 2px);'><span>[percent]%</span></div></div>"
+					else 
+						votes_right += "<div class='votewrap'><div class='voteresult' style='background-color: rgba(0, 0, 0, 0);'><span>[percent]%</span></div></div>";
 		votes_left += "</div>"
 		votes_right += "</div>"
 		text += "<div class='voteresults'>[votes_left][votes_right]</div>"
