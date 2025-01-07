@@ -564,7 +564,7 @@
 	assignedrole = "Solar Federation Operative"
 	can_load_appearance = TRUE
 	loadout_enabled = TRUE
-	category = "offstation"
+	category = "sol"
 
 /obj/effect/mob_spawn/human/solfed/demoman
 	name = "Solar Federation Support"

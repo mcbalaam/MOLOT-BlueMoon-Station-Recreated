@@ -19,58 +19,80 @@ export const SpawnerContent = (props, context) => {
   const misc = spawners.filter((spawner) => spawner.category === 'misc');
   const syndicate = spawners.filter((spawner) => spawner.category === 'syndicate');
   const inteq = spawners.filter((spawner) => spawner.category === 'inteq');
+  const sol = spawners.filter((spawner) => spawner.category === 'sol');
   const midround = spawners.filter((spawner) => spawner.category === 'midround');
-	const special = spawners.filter((spawner) => spawner.category === 'special');
-	const offstation = spawners.filter((spawner) => spawner.category === 'offstation');
+  const special = spawners.filter((spawner) => spawner.category === 'special');
+  const offstation = spawners.filter((spawner) => spawner.category === 'offstation');
 
   return (
     <Box>
       <Section fitted>
         <Tabs>
-          <Tabs.Tab
-            icon="ghost"
-            selected={tab === 'misc'}
-            onClick={() => setTab('misc')}>
-            Misc ({misc.length})
-          </Tabs.Tab>
-          <Tabs.Tab
-            icon="handshake"
-            selected={tab === 'syndicate'}
-            onClick={() => setTab('syndicate')}>
-            Syndicate ({syndicate.length})
-          </Tabs.Tab>
-          <Tabs.Tab
-            icon="skull-crossbones"
-            selected={tab === 'inteq'}
-            onClick={() => setTab('inteq')}>
-            InteQ ({inteq.length})
-          </Tabs.Tab>
-          <Tabs.Tab
-            icon="dice-five"
-            selected={tab === 'midround'}
-            onClick={() => setTab('midround')}>
-            Mid-Round ({midround.length})
-          </Tabs.Tab>
-					<Tabs.Tab
-            icon="heart"
-            selected={tab === 'special'}
-            onClick={() => setTab('special')}>
-            Special ({special.length})
-          </Tabs.Tab>
-					<Tabs.Tab
-            icon="person-digging"
-            selected={tab === 'offstation'}
-            onClick={() => setTab('offstation')}>
-            Off-Station ({offstation.length})
-          </Tabs.Tab>
+          {misc.length > 0 && (
+            <Tabs.Tab
+              icon="ghost"
+              selected={tab === 'misc'}
+              onClick={() => setTab('misc')}>
+              Misc ({misc.length})
+            </Tabs.Tab>
+          )}
+          {syndicate.length > 0 && (
+            <Tabs.Tab
+              icon="handshake"
+              selected={tab === 'syndicate'}
+              onClick={() => setTab('syndicate')}>
+              Syndicate ({syndicate.length})
+            </Tabs.Tab>
+          )}
+          {inteq.length > 0 && (
+            <Tabs.Tab
+              icon="skull-crossbones"
+              selected={tab === 'inteq'}
+              onClick={() => setTab('inteq')}>
+              InteQ ({inteq.length})
+            </Tabs.Tab>
+          )}
+          {sol.length > 0 && (
+            <Tabs.Tab
+              icon="flag"
+              selected={tab === 'sol'}
+              onClick={() => setTab('sol')}>
+              Solar Gov. ({sol.length})
+            </Tabs.Tab>
+          )}
+          {midround.length > 0 && (
+            <Tabs.Tab
+              icon="dice-five"
+              selected={tab === 'midround'}
+              onClick={() => setTab('midround')}>
+              Mid-Round ({midround.length})
+            </Tabs.Tab>
+          )}
+          {special.length > 0 && (
+            <Tabs.Tab
+              icon="heart"
+              selected={tab === 'special'}
+              onClick={() => setTab('special')}>
+              Special ({special.length})
+            </Tabs.Tab>
+          )}
+          {offstation.length > 0 && (
+            <Tabs.Tab
+              icon="person-digging"
+              selected={tab === 'offstation'}
+              onClick={() => setTab('offstation')}>
+              Off-Station ({offstation.length})
+            </Tabs.Tab>
+          )}
         </Tabs>
       </Section>
       {tab === 'misc' && <RolelistMisc spawners={misc} />}
       {tab === 'syndicate' && <RolelistSyndicate spawners={syndicate} />}
       {tab === 'inteq' && <RolelistInteq spawners={inteq} />}
+      {tab === 'sol' && <RolelistSol spawners={sol} />}
       {tab === 'midround' && <RolelistMidround spawners={midround} />}
-			{tab === 'special' && <RolelistSpecial spawners={special} />}
-			{tab === 'offstation' && <RolelistOffstation spawners={offstation} />}
+      {tab === 'special' && <RolelistSpecial spawners={special} />}
+      {tab === 'offstation' && <RolelistOffstation spawners={offstation} />}
     </Box>
   );
 };
@@ -150,6 +172,16 @@ export const RolelistSyndicate = ({ spawners, context }) => {
 };
 
 export const RolelistInteq = ({ spawners, context }) => {
+  return (
+    <Section>
+      {spawners.map((spawner) => (
+        <RolelistItem key={spawner.name} spawner={spawner} />
+      ))}
+    </Section>
+  );
+};
+
+export const RolelistSol = ({ spawners, context }) => {
   return (
     <Section>
       {spawners.map((spawner) => (
