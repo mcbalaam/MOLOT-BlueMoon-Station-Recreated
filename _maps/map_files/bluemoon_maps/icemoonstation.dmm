@@ -8403,6 +8403,16 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/maintenance/department/security)
+"bzN" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4";
+	tag = ""
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "bzT" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 8
@@ -13976,12 +13986,25 @@
 /turf/open/floor/iron,
 /area/service/hydroponics/garden)
 "czo" = (
-/obj/structure/cable{
-	icon_state = "0-8"
+/obj/effect/turf_decal/tile/red{
+	dir = 1
 	},
-/obj/machinery/power/floodlight/lamppost/snow/three,
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 4
+	},
+/area/ruin/icemoon/unpowered/glacier/main)
 "czu" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 2;
@@ -15172,13 +15195,11 @@
 	icon_state = "4-8"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
-/obj/machinery/door/airlock/external{
-	name = "Nuclear Power Station"
-	},
 /obj/effect/turf_decal/delivery/white,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "glacier_rbmk"
 	},
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/plating,
 /area/ruin/icemoon/unpowered/glacier/nuclear)
 "cIB" = (
@@ -17910,8 +17931,11 @@
 /turf/open/floor/iron,
 /area/maintenance/disposal/incinerator)
 "dht" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/floodlight/lamppost/snow/four,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "dhv" = (
 /obj/structure/table,
@@ -32505,7 +32529,6 @@
 /turf/open/floor/iron/white,
 /area/ruin/icemoon/unpowered/glacier/medbay)
 "fLh" = (
-/obj/machinery/door/airlock/external,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -32522,7 +32545,8 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/catwalk_floor/airless,
+/obj/machinery/door/airlock/hatch/syndicate,
+/turf/open/floor/catwalk_floor,
 /area/ruin/icemoon/unpowered/glacier/engineering)
 "fLl" = (
 /obj/effect/turf_decal/tile/blue{
@@ -39580,6 +39604,9 @@
 	dir = 8
 	},
 /obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/catwalk_floor,
@@ -40346,11 +40373,8 @@
 /turf/open/floor/iron/smooth,
 /area/ai_monitored/turret_protected/aisat/service)
 "hiT" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/floodlight/lamppost/snow/four,
-/turf/open/floor/plating/snowed/smoothed/icemoon,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plating/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "hiU" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -47736,7 +47760,6 @@
 /turf/open/floor/iron/dark/textured,
 /area/security/prison)
 "iAO" = (
-/obj/machinery/door/airlock/external,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -47753,7 +47776,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/catwalk_floor/airless,
+/obj/machinery/door/airlock/hatch/syndicate,
+/obj/structure/fans/tiny,
+/turf/open/floor/catwalk_floor,
 /area/ruin/icemoon/unpowered/glacier/engineering)
 "iAS" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
@@ -61275,7 +61300,12 @@
 /turf/open/floor/wood/wood_large,
 /area/command/bridge)
 "kUq" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/floodlight/lamppost/snow/one{
+	dir = 8
+	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "kUw" = (
@@ -64897,7 +64927,14 @@
 	},
 /area/hallway/primary/starboard)
 "lzX" = (
-/obj/item/fuel_rod/material/telecrystal,
+/obj/item/fuel_rod/material/telecrystal{
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/obj/item/fuel_rod/material/telecrystal{
+	pixel_x = 6;
+	pixel_y = 0
+	},
 /turf/open/pool,
 /area/ruin/icemoon/unpowered/glacier/nuclear)
 "lzZ" = (
@@ -70875,14 +70912,11 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
-/obj/machinery/door/airlock/external{
-	name = "Nuclear Power Station"
-	},
 /obj/effect/turf_decal/delivery/white,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "glacier_rbmk"
 	},
+/obj/machinery/door/airlock/hatch/syndicate,
 /turf/open/floor/plating,
 /area/ruin/icemoon/unpowered/glacier/nuclear)
 "mEw" = (
@@ -91790,6 +91824,16 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/department/science)
+"qqB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/catwalk_floor,
+/area/science)
 "qqF" = (
 /obj/structure/sign/poster/official/random{
 	pixel_y = 32
@@ -93302,10 +93346,10 @@
 /turf/open/floor/iron,
 /area/ruin/icemoon/unpowered/glacier/cafeteria)
 "qEm" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/machinery/shower{
+	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/noslip,
 /area/ruin/icemoon/unpowered/glacier/nuclear)
 "qEs" = (
 /obj/structure/chair/stool/bar/directional/west{
@@ -111486,18 +111530,14 @@
 	},
 /area/commons/cryopod)
 "tSe" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 8
-	},
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "0-4"
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/machinery/power/floodlight/lamppost/snow/sidewalk{
+	layer = 5.2
 	},
-/turf/open/floor/catwalk_floor,
-/area/science)
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "tSl" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin/towel,
@@ -112882,6 +112922,15 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"udi" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/floodlight/lamppost/snow/one{
+	layer = 5.2
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "udu" = (
 /obj/machinery/vending/coffee,
 /obj/effect/turf_decal/bot,
@@ -114535,11 +114584,8 @@
 /turf/open/floor/plating,
 /area/ruin/icemoon/unpowered/glacier/outsidestorage)
 "urQ" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/floodlight/lamppost/snow/one{
-	dir = 8
+/obj/structure/transit_tube/diagonal/crossing{
+	dir = 4
 	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
@@ -123723,7 +123769,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/catwalk_floor/airless,
+/turf/open/floor/catwalk_floor,
 /area/ruin/icemoon/unpowered/glacier/engineering)
 "wex" = (
 /obj/machinery/airalarm/directional/east,
@@ -127750,13 +127796,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/hallway/secondary/exit/departure_lounge)
 "wPR" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-4";
-	tag = ""
-	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "wPS" = (
@@ -131386,11 +131426,12 @@
 /turf/open/floor/mineral/bananium,
 /area/service/theater)
 "xzd" = (
-/obj/structure/transit_tube/diagonal/crossing{
-	dir = 4
+/obj/structure/pool/ladder{
+	dir = 2;
+	pixel_y = 24
 	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
+/turf/open/pool,
+/area/ruin/icemoon/unpowered/glacier/nuclear)
 "xzk" = (
 /turf/closed/wall,
 /area/service/hydroponics/lobby)
@@ -131915,14 +131956,11 @@
 	},
 /area/science/hall)
 "xDX" = (
-/obj/structure/cable{
-	icon_state = "0-8"
+/obj/machinery/light/small{
+	dir = 8
 	},
-/obj/machinery/power/floodlight/lamppost/snow/one{
-	layer = 5.2
-	},
-/turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
+/turf/open/floor/iron/dark,
+/area/ruin/icemoon/unpowered/glacier/nuclear)
 "xDZ" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plating,
@@ -134065,12 +134103,10 @@
 /area/maintenance/aft/secondary)
 "xYD" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "0-8"
 	},
-/obj/machinery/power/floodlight/lamppost/snow/sidewalk{
-	layer = 5.2
-	},
-/turf/open/floor/plating/asteroid/snow/icemoon,
+/obj/machinery/power/floodlight/lamppost/snow/three,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/surface/outdoors)
 "xYH" = (
 /obj/machinery/portable_atmospherics/scrubber/huge/movable,
@@ -139477,8 +139513,8 @@ sCo
 wWE
 kdZ
 qyE
-nwX
-ykn
+xDX
+xzd
 mAd
 mWs
 jnV
@@ -144105,7 +144141,7 @@ hzb
 gAV
 gAV
 rRb
-xDX
+udi
 gAV
 gAV
 wCc
@@ -147714,7 +147750,7 @@ gCW
 xJx
 xJx
 xJx
-mLJ
+czo
 xJx
 xJx
 vZq
@@ -175858,7 +175894,7 @@ gAV
 paR
 paR
 wws
-urQ
+kUq
 gAV
 uya
 gAV
@@ -176612,7 +176648,7 @@ nyr
 nyr
 waL
 uya
-czo
+xYD
 gAV
 gAV
 gAV
@@ -210134,7 +210170,7 @@ gAV
 gAV
 rRb
 gAV
-xYD
+tSe
 gAV
 gAV
 rRb
@@ -240993,7 +241029,7 @@ ssT
 ssT
 hYe
 qqI
-tSe
+haj
 vLS
 hYe
 cej
@@ -241250,7 +241286,7 @@ ssT
 ssT
 hYe
 fjb
-haj
+qqB
 jcb
 hYe
 fMC
@@ -271014,8 +271050,8 @@ hhV
 hhV
 gAV
 gAV
-dht
-dht
+hiT
+hiT
 hYT
 gAV
 gAV
@@ -271270,8 +271306,8 @@ gTC
 hhV
 tjB
 gAV
-kUq
-kUq
+wPR
+wPR
 flT
 flT
 flT
@@ -271527,7 +271563,7 @@ gTC
 gTC
 tjB
 gAV
-dht
+hiT
 gAV
 flT
 agz
@@ -271784,7 +271820,7 @@ gTC
 gTC
 gAV
 uya
-dht
+hiT
 flT
 flT
 mOs
@@ -272041,7 +272077,7 @@ gTC
 hhV
 tjB
 gAV
-dht
+hiT
 flT
 dvF
 xHS
@@ -272298,7 +272334,7 @@ gTC
 hhV
 tjB
 gAV
-dht
+hiT
 flT
 eae
 xmj
@@ -272555,7 +272591,7 @@ gTC
 hhV
 tjB
 gAV
-kUq
+wPR
 flT
 bGy
 pCS
@@ -272812,7 +272848,7 @@ hhV
 hhV
 gAV
 uya
-dht
+hiT
 flT
 flT
 wMS
@@ -273069,7 +273105,7 @@ hhV
 hhV
 gAV
 uya
-dht
+hiT
 tjB
 flT
 agz
@@ -273326,7 +273362,7 @@ gAV
 gAV
 gAV
 gAV
-dht
+hiT
 gAV
 flT
 flT
@@ -273583,8 +273619,8 @@ uya
 uya
 gAV
 gAV
-kUq
-dht
+wPR
+hiT
 gAV
 vqS
 tjB
@@ -273841,11 +273877,11 @@ gAV
 rRb
 uya
 uya
-dht
-dht
-kUq
-dht
-dht
+hiT
+hiT
+wPR
+hiT
+hiT
 eXB
 tsO
 cXS
@@ -274093,7 +274129,7 @@ gAV
 uya
 uya
 uya
-xzd
+urQ
 gAV
 uya
 gAV
@@ -274351,7 +274387,7 @@ gAV
 gAV
 uya
 hBh
-xzd
+urQ
 gAV
 uya
 gAV
@@ -274609,7 +274645,7 @@ uya
 gAV
 gAV
 gAV
-xzd
+urQ
 uya
 gAV
 gAV
@@ -276362,7 +276398,7 @@ tjB
 tjB
 fET
 ixk
-wPR
+bzN
 gAV
 gla
 szS
@@ -291783,7 +291819,7 @@ uya
 uya
 uya
 pEL
-hiT
+dht
 uya
 uya
 uya

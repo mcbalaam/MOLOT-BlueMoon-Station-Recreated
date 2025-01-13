@@ -30,6 +30,7 @@
 	var/last_interaction = 0
 	var/interaction_cooldown = 5
 	var/power_update_delay = 2
+	var/light_on_init = TRUE
 
 /obj/machinery/power/floodlight/lamppost/examine(mob/user)
 	. = ..()
@@ -98,6 +99,17 @@
 		light_source.set_light(0, 0, "#ffde9b")
 		lamp_lights += light_source
 	update_lamp_positions()
+	
+	if(light_on_init)
+		addtimer(CALLBACK(src, .proc/try_initial_lighting), 10)
+
+/obj/machinery/power/floodlight/lamppost/proc/try_initial_lighting()
+	var/total_power_needed = lamp_power_usage * number_of_lamps
+	if(check_power(total_power_needed))
+		lamps_active = number_of_lamps
+		active_power_usage = total_power_needed
+		adjust_lamppost_light()
+		add_load(active_power_usage)
 
 /obj/machinery/power/floodlight/lamppost/proc/update_lamp_positions()
 	var/obj/effect/dummy/lighting_obj/light_source
@@ -187,5 +199,3 @@
 	turn_off()
 	balloon_alert(user, "выключено")
 	playsound(src, 'sound/machines/button4.ogg', 50, TRUE)
-
-// a fucking trailing newline, eat shit linters
