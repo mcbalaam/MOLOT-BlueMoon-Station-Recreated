@@ -130,3 +130,32 @@
 	mineralSpawnChanceList += list(/turf/closed/mineral/strange = 30)
 	. = ..()
 
+// BLUEMOON ADD - Сабтайп каменюк для ледяных камушков
+/obj/item/strange_rock/icy
+	icon = 'modular_splurt/code/modules/research/xenoarch/fossil_and_artifact.dmi'
+	name = "icy strange rock"
+	icon_state = "ice"
+	item_state = "strange"
+
+/obj/item/strange_rock/icy/Initialize()
+	icon_state = pick("ice","ice2")
+	. = ..()
+
+/turf/closed/mineral/snowmountain/strange
+	mineralType = /obj/item/strange_rock/icy
+	mineralAmt = 1
+	scan_state = "rock_Strange"
+	baseturfs = /turf/closed/mineral/random/snow
+
+/turf/closed/mineral/random/snow
+	name = "snowy mountainside"
+	icon = 'icons/turf/mining.dmi'
+	smooth_icon = 'icons/turf/walls/mountain_wall.dmi'
+	icon_state = "rock_snow"
+	base_icon_state = "mountain_wall"
+	initial_gas_mix = FROZEN_ATMOS
+	baseturfs = /turf/open/floor/plating/asteroid/snow
+	mineralSpawnChanceList = list(
+		/turf/closed/mineral/snowmountain = 95,
+		/turf/closed/mineral/snowmountain/strange = 5
+	)
